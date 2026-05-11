@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WRKOS | Archive</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#000;
+  color:#fff;
+  overflow:hidden;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:20px 30px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  z-index:999;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  pointer-events:auto;
+}
+
+.logo img{
+  height:34px;
+}
+
+.logo span{
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.back-btn{
+  pointer-events:auto;
+  text-decoration:none;
+  color:#fff;
+  background:rgba(20,20,20,.6);
+  backdrop-filter:blur(10px);
+  padding:10px 16px;
+  border-radius:999px;
+  font-size:13px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.hero{
+  width:100%;
+  height:100vh;
+  display:flex;
+}
+
+/* =========================
+   LEFT CATALOG
+========================= */
+.hero-right{
+  width:520px;
+  height:100vh;
+
+  display:flex;
+  flex-direction:column;
+
+  padding:90px 40px 20px;
+  background:#050505;
+  border-right:1px solid rgba(255,255,255,.06);
+}
+
+.hero-right h2{
+  font-size:38px;
+}
+
+.hero-right p{
+  font-size:13px;
+  color:#888;
+  margin-bottom:18px;
+}
+
+/* SEARCH */
+.search-group{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.search-group input,
+.search-group select{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:none;
+  outline:none;
+  background:#14141b;
+  color:#fff;
+}
+
+/* LIST */
+.list{
+  flex:1;
+  overflow:auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding-right:4px;
+}
+
+/* =========================
+   DOCUMENT CARD
+========================= */
+.unit{
+  position:relative;
+  overflow:hidden;
+
+  min-height:110px;
+
+  display:flex;
+  align-items:flex-end;
+
+  padding:18px;
+  border-radius:14px;
+
+  cursor:pointer;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  transition:.25s;
+  isolation:isolate;
+}
+
+/* background image */
+.unit::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-image:var(--bg);
+  background-size:cover;
+  background-position:center;
+
+  filter:blur(2px);
+  transform:scale(1.1);
+
+  z-index:-2;
+}
+
+/* dark overlay */
+.unit::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.92),
+      rgba(0,0,0,.45)
+    );
+
+  z-index:-1;
+}
+
+.unit:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,255,255,.18);
+}
+
+.unit-info h3{
+  font-size:18px;
+  margin-bottom:6px;
+}
+
+.unit-info .reg{
+  font-size:12px;
+  color:#9f9f9f;
+  margin-bottom:6px;
+}
+
+.unit-info .meta{
+  font-size:13px;
+  color:#d0d0d0;
+}
+
+/* accent */
+.unit{
+  border-left:4px solid var(--accent);
+}
+
+/* COLORS */
+.doc{ --accent:#4da3ff; }
+.fdoc{ --accent:#a96cff; }
+.dlog{ --accent:#46d9ff; }
+.fimo{ --accent:#ff9f43; }
+.rep{ --accent:#3ddc84; }
+
+/* FOOTER */
+.footer{
+  margin-top:10px;
+  font-size:11px;
+  color:#666;
+}
+
+/* =========================
+   RIGHT PANEL
+========================= */
+.hero-left{
+  flex:1;
+  position:relative;
+  overflow:hidden;
+  background:#000;
+}
+
+/* wallpaper */
+.hero-left img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:.3s;
+}
+
+#bg[src=""]{
+  opacity:0;
+}
+
+/* overlay */
+.hero-left::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.92),
+      rgba(0,0,0,.35)
+    );
+
+  pointer-events:none;
+}
+
+/* PROFILE */
+.profile{
+  position:absolute;
+
+  left:60px;
+  top:120px;
+  bottom:40px;
+
+  width:calc(100% - 120px);
+
+  display:flex;
+  flex-direction:column;
+
+  z-index:2;
+}
+
+.profile h1{
+  font-size:58px;
+  margin-bottom:10px;
+}
+
+.profile p{
+  color:#bbb;
+  line-height:1.6;
+}
+
+/* INFO GRID */
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-top:18px;
+}
+
+.info-box{
+  background:rgba(0,0,0,.45);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.08);
+  padding:10px;
+  border-radius:10px;
+  font-size:12px;
+}
+
+/* CONTENT */
+.doc-content{
+  margin-top:18px;
+
+  background:rgba(0,0,0,.45);
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:14px;
+  padding:18px;
+
+  line-height:1.7;
+  color:#d0d0d0;
+
+
+  overflow:auto;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:900px){
+
+  body{
+    overflow:auto;
+  }
+
+  .hero{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .hero-right{
+    width:100%;
+    height:auto;
+    min-height:100vh;
+  }
+
+  .hero-left{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+
+  <a class="back-btn" href="../index.html">
+    ← Back
+  </a>
+
+  <div class="logo">
+    <img src="../iaf-logo.png">
+    <span>WRKOS</span>
+  </div>
+
+</div>
+
+<section class="hero">
+
+<!-- LEFT -->
+<div class="hero-right">
+
+  <h2>IAF Archive</h2>
+  <p>Internal documentation / memo / classified records</p>
+
+  <div class="search-group">
+
+    <input
+      id="search"
+      placeholder="Search archive..."
+      oninput="applyFilter()"
+    >
+
+    <select
+      id="filter"
+      onchange="applyFilter()"
+    >
+      <option value="ALL">All Category</option>
+      <option value="DOC">DOC</option>
+      <option value="FDOC">FDOC</option>
+      <option value="DLOG">DLOG</option>
+      <option value="FIMO">FIMO</option>
+      <option value="REP">REP</option>
+    </select>
+
+  </div>
+
+  <div class="list" id="list"></div>
+
+  <div class="footer">
+    © 2026 IAF Digital Engineering — WRKOS
+  </div>
+
+</div>
+
+<!-- RIGHT -->
+<div class="hero-left">
+
+  <img id="bg" src="">
+
+  <div class="profile">
+
+    <h1 id="title">SELECT DOCUMENT</h1>
+
+    <p id="desc">
+      Archive document preview will appear here
+    </p>
+
+    <div class="info-grid" id="info"></div>
+
+    <div class="doc-content" id="content">
+      No document selected
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<script>
+
+let database=[];
+
+async function load(){
+
+  const res = await fetch("data.json");
+
+  database = await res.json();
+
+  render(database);
+}
+
+function parseReg(reg){
+
+  const prefix =
+    reg.match(/^[A-Z]+/)?.[0]
+    || "UNKNOWN";
+
+  const digits =
+    reg.replace(/\D/g,"");
+
+  const number =
+    digits.slice(0,3) || "---";
+
+  const raw =
+    digits.slice(-8);
+
+  let date="--/--/----";
+
+  if(raw.length===8){
+
+    date=
+      `${raw.slice(0,2)}/`+
+      `${raw.slice(2,4)}/`+
+      `${raw.slice(4,8)}`;
+  }
+
+  return {
+    prefix,
+    number,
+    date
+  };
+}
+
+function bgOf(prefix){
+
+  return {
+
+    DOC:"../img/pic/Deu.png",
+    FDOC:"../img/pic/Felo.png",
+    DLOG:"../img/pic/Fela.png",
+    FIMO:"../img/pic/Vix.png",
+    REP:"../img/pic/Vix.png"
+
+  }[prefix] || "";
+}
+
+function labelOf(p){
+
+  return {
+
+    DOC:"DOC",
+    FDOC:"FURRU DOC",
+    DLOG:"LOG",
+    FIMO:"MEMO",
+    REP:"REPORT"
+
+  }[p] || p;
+}
+
+function classOf(p){
+  return p.toLowerCase();
+}
+
+function render(data){
+
+  const wrap =
+    document.getElementById("list");
+
+  wrap.innerHTML = "";
+
+  if(!data.length){
+
+    wrap.innerHTML = `
+      <div style="
+        text-align:center;
+        color:#777;
+        padding:50px;
+      ">
+        No document found
+      </div>
+    `;
+
+    return;
+  }
+
+  data.forEach(file=>{
+
+    const info =
+      parseReg(file.reg_id);
+
+    const card =
+      document.createElement("div");
+
+    card.className =
+      `unit ${classOf(info.prefix)}`;
+
+    card.style.setProperty(
+      "--bg",
+      `url(${bgOf(info.prefix)})`
+    );
+
+    card.innerHTML = `
+      <div class="unit-info">
+
+        <h3>${file.title}</h3>
+
+        <div class="reg">
+          REG-ID : ${file.reg_id}
+        </div>
+
+        <div class="meta">
+          ${labelOf(info.prefix)}
+          #${info.number}
+          •
+          ${info.date}
+        </div>
+
+      </div>
+    `;
+
+    card.onclick = ()=>{
+
+      if(window.innerWidth < 900){
+
+        location.href =
+          `read.html?id=${
+            encodeURIComponent(file.reg_id)
+          }`;
+
+        return;
+      }
+
+      select(file);
+    };
+
+    wrap.appendChild(card);
+  });
+}
+
+function select(file){
+
+  const info =
+    parseReg(file.reg_id);
+
+  document.getElementById("bg").src =
+    bgOf(info.prefix);
+
+  document.getElementById("title").textContent =
+    file.title || "UNKNOWN";
+
+  document.getElementById("desc").textContent =
+    file.description ||
+    "Internal archive document";
+
+  const infobox =
+    document.getElementById("info");
+
+  infobox.innerHTML = "";
+
+  [
+    ["REG-ID", file.reg_id],
+    ["Category", labelOf(info.prefix)],
+    ["Document No", info.number],
+    ["Date", info.date],
+  ].forEach(f=>{
+
+    const box =
+      document.createElement("div");
+
+    box.className = "info-box";
+
+    box.textContent =
+      `${f[0]}: ${f[1]}`;
+
+    infobox.appendChild(box);
+  });
+
+document.getElementById("content").innerHTML =
+  (file.content || "No content available")
+  .replace(/\n/g,"<br>");
+}
+
+function applyFilter(){
+
+  const q =
+    document.getElementById("search")
+    .value
+    .toLowerCase();
+
+  const type =
+    document.getElementById("filter")
+    .value;
+
+  render(
+
+    database.filter(file=>{
+
+      const info =
+        parseReg(file.reg_id);
+
+      return (
+
+        (
+          file.title +
+          file.content +
+          file.reg_id
+        )
+
+        .toLowerCase()
+        .includes(q)
+
+        &&
+
+        (
+          type==="ALL"
+          ||
+          info.prefix===type
+        )
+      );
+    })
+  );
+}
+
+load();
+
+</script>
+
+</body>
+</html>

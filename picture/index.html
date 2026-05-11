@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WRKOS | Gallery</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#000;
+  color:#fff;
+  overflow:hidden;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:20px 30px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  z-index:999;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  height:34px;
+}
+
+.logo span{
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.back-btn{
+  text-decoration:none;
+  color:#fff;
+  background:rgba(20,20,20,.6);
+  backdrop-filter:blur(10px);
+  padding:10px 16px;
+  border-radius:999px;
+  font-size:13px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.hero{
+  width:100%;
+  height:100vh;
+  display:flex;
+}
+
+/* =========================
+   LEFT PANEL
+========================= */
+.hero-right{
+  width:520px;
+  height:100vh;
+
+  display:flex;
+  flex-direction:column;
+
+  padding:90px 40px 20px;
+
+  background:#050505;
+
+  border-right:1px solid rgba(255,255,255,.06);
+}
+
+.hero-right h2{
+  font-size:38px;
+}
+
+.hero-right p{
+  font-size:13px;
+  color:#888;
+  margin-bottom:18px;
+}
+
+/* SEARCH */
+.search input{
+  width:100%;
+  padding:12px 14px;
+
+  border-radius:10px;
+  border:none;
+  outline:none;
+
+  background:#14141b;
+  color:#fff;
+
+  margin-bottom:16px;
+}
+
+/* LIST */
+.list{
+  flex:1;
+
+  overflow:auto;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:12px;
+  padding-right:4px;
+}
+
+/* =========================
+   CARD
+========================= */
+.unit{
+  position:relative;
+  overflow:hidden;
+
+  min-height:100px;
+
+  display:flex;
+  align-items:flex-end;
+
+  padding:16px;
+  border-radius:14px;
+
+  cursor:pointer;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  transition:.25s;
+
+  isolation:isolate;
+}
+
+.unit::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-image:var(--bg);
+  background-size:cover;
+  background-position:center;
+
+  filter:blur(2px);
+  transform:scale(1.1);
+
+  z-index:-2;
+}
+
+.unit::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.9),
+      rgba(0,0,0,.35)
+    );
+
+  z-index:-1;
+}
+
+.unit:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,255,255,.18);
+}
+
+.unit-info h3{
+  font-size:18px;
+  margin-bottom:3px;
+}
+
+.unit-info span{
+  font-size:12px;
+  color:#bdbdbd;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:10px;
+  font-size:11px;
+  color:#666;
+}
+
+/* =========================
+   RIGHT GALLERY
+========================= */
+.hero-left{
+  flex:1;
+  position:relative;
+  overflow:hidden;
+  background:#000;
+}
+
+/* background */
+#bg{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  object-position:center;
+
+  transition:.3s;
+}
+
+#bg[src=""]{
+  opacity:0;
+}
+
+/* dark overlay */
+.hero-left::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.92),
+      rgba(0,0,0,.35)
+    );
+
+  pointer-events:none;
+}
+
+/* CONTENT */
+.profile{
+  position:absolute;
+
+  left:60px;
+  top:120px;
+  bottom:40px;
+
+  width:calc(100% - 120px);
+
+  display:flex;
+  flex-direction:column;
+
+  z-index:2;
+}
+
+.profile h1{
+  font-size:62px;
+}
+
+.profile p{
+  color:#bbb;
+  margin-top:6px;
+  line-height:1.5;
+}
+
+/* GALLERY */
+.gallery{
+  margin-top:22px;
+
+  flex:1;
+
+  overflow:auto;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fill,minmax(220px,1fr));
+
+  gap:14px;
+}
+
+/* IMAGE */
+.gallery img{
+  width:100%;
+  height:240px;
+
+  object-fit:cover;
+
+  border-radius:16px;
+
+  cursor:pointer;
+
+  transition:.25s;
+
+  background:#111;
+
+  border:1px solid rgba(255,255,255,.06);
+}
+
+.gallery img:hover{
+  transform:scale(1.02);
+  border-color:rgba(255,255,255,.2);
+}
+
+/* =========================
+   VIEWER
+========================= */
+.viewer{
+  position:absolute;
+  top:0;
+  right:0;
+  width:calc(100% - 480px);
+  height:100%;
+
+  display:none;
+  z-index:50;
+}
+
+.viewer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  backdrop-filter:blur(10px);
+}
+
+.viewer img{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+
+  width:80%;
+  max-height:90%;
+
+  object-fit:contain;
+  border-radius:16px;
+
+  box-shadow:0 40px 120px rgba(0,0,0,.7);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:900px){
+
+  body{
+    overflow:auto;
+  }
+
+  .hero{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .hero-right{
+    width:100%;
+    height:auto;
+    min-height:100vh;
+  }
+
+  .hero-left{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+
+  <a class="back-btn" href="../index.html">
+    ← Back
+  </a>
+
+  <div class="logo">
+    <img src="../iaf-logo.png">
+    <span>WRKOS</span>
+  </div>
+
+</div>
+
+<section class="hero">
+
+<!-- LEFT -->
+<div class="hero-right">
+
+  <h2>Image Gallery</h2>
+  <p>IAF | Personnel visual archive</p>
+
+  <div class="search">
+    <input
+      id="search"
+      placeholder="Search unit..."
+      oninput="filterUnits()"
+    >
+  </div>
+
+  <div class="list" id="list"></div>
+
+  <div class="footer">
+    © 2026 IAF Digital Engineering — WRKOS
+  </div>
+
+</div>
+
+<!-- RIGHT -->
+<div class="hero-left">
+
+  <img id="bg" src="">
+
+  <div class="profile">
+
+    <h1 id="name">SELECT UNIT</h1>
+
+    <p id="desc">
+      Personnel image gallery will appear here
+    </p>
+
+    <div class="gallery" id="gallery"></div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- VIEWER -->
+<div
+  class="viewer"
+  id="viewer"
+  onclick="this.style.display='none'"
+>
+  <img id="viewerImg">
+</div>
+
+<script>
+
+let all = [];
+
+async function load(){
+
+  const res =
+    await fetch("../furru/data.json");
+
+  const data =
+    await res.json();
+
+  all =
+    Object.values(data.personnel);
+
+  render(all);
+}
+
+function render(list){
+
+  const el =
+    document.getElementById("list");
+
+  el.innerHTML = "";
+
+  list.forEach(fp=>{
+
+    const div =
+      document.createElement("div");
+
+    div.className = "unit";
+
+    div.style.setProperty(
+      "--bg",
+      `url(${fp.profile})`
+    );
+
+    div.innerHTML = `
+      <div class="unit-info">
+
+        <h3>${fp.name}</h3>
+
+        <span>
+          ${fp.model || fp.sn}
+        </span>
+
+      </div>
+    `;
+
+    div.onclick = ()=>{
+
+      if(window.innerWidth < 900){
+
+        select(fp);
+
+        window.scrollTo({
+          top:9999,
+          behavior:"smooth"
+        });
+
+        return;
+      }
+
+      select(fp);
+    };
+
+    el.appendChild(div);
+  });
+}
+
+function select(fp){
+
+  document.getElementById("bg").src =
+    fp.profile || "";
+
+  document.getElementById("name").textContent =
+    fp.name || "UNKNOWN";
+
+  document.getElementById("desc").textContent =
+    fp.subtitle ||
+    "No description available";
+
+  const gallery =
+    document.getElementById("gallery");
+
+  gallery.innerHTML = "";
+
+  /* profile pic */
+  addImage(fp.profile);
+
+  /* outfits */
+  (fp.outfits || []).forEach(img=>{
+
+    addImage(img);
+  });
+}
+
+function addImage(src){
+
+  const img =
+    document.createElement("img");
+
+  img.src = src;
+
+  img.onclick = ()=>{
+
+    document.getElementById("viewerImg").src =
+      src;
+
+    document.getElementById("viewer").style.display =
+      "block";
+  };
+
+  document
+    .getElementById("gallery")
+    .appendChild(img);
+}
+
+function filterUnits(){
+
+  const v =
+    document.getElementById("search")
+    .value
+    .toLowerCase();
+
+  render(
+
+    all.filter(fp =>
+
+      (fp.name || "")
+      .toLowerCase()
+      .includes(v)
+
+      ||
+
+      (fp.sn || "")
+      .toLowerCase()
+      .includes(v)
+
+      ||
+
+      (fp.model || "")
+      .toLowerCase()
+      .includes(v)
+    )
+  );
+}
+
+load();
+
+</script>
+
+</body>
+</html>

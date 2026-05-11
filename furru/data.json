@@ -1,0 +1,176 @@
+{
+  "personnel": {
+    "FP001": {
+      "name": "Deu",
+      "sn": "FP001",
+      "reg": "FP00111082025M",
+      "sex": "Male",
+      "deploy": "11/08/2025",
+      "height_no_ears": 193,
+      "height_with_ears": 203,
+      "model": "Deuzear",
+      "profile": "../img/pic/Deu.png",
+      "subtitle": "FP001 | FP00111082025M | lead ICT",
+      "role": "ICT",
+      "outfits": [
+        "../img/outfit/deu/1.png",
+        "../img/outfit/deu/2.png",
+        "../img/outfit/deu/4.png"
+      ]
+    },
+    "FP002": {
+      "name": "Alpha",
+      "sn": "FP002",
+      "reg": "FP00227102025M",
+      "sex": "Male",
+      "deploy": "27/10/2025",
+      "height_no_ears": 203,
+      "height_with_ears": 220,
+      "model": "Alphazear",
+      "profile": "../img/pic/Alpha.png",
+      "subtitle": "FP002 | FP00227102025M | EBS security enforcement",
+      "role": "EBS",
+      "outfits": [
+        "../img/outfit/alpha/1.png",
+        "../img/outfit/alpha/2.png"
+      ]
+    },
+    "FP003": {
+      "name": "Cebol",
+      "sn": "FP003",
+      "reg": "FP00307112025U",
+      "sex": "Undefined",
+      "deploy": "07/11/2025",
+      "height_no_ears": 122,
+      "height_with_ears": 130,
+      "model": "Chibigen",
+      "profile": "../img/pic/Cebol.png",
+      "subtitle": "FP003 | FP00307112025U | none",
+      "role": "none",
+      "outfits": [
+        "../img/outfit/cebol/1.png"
+      ]
+    },
+    "FP004": {
+      "name": "Felo",
+      "sn": "FP004",
+      "reg": "FP00413112025M",
+      "sex": "Male",
+      "deploy": "13/11/2025",
+      "height_no_ears": 175,
+      "height_with_ears": 183,
+      "model": "Winterpal Feline",
+      "profile": "../img/pic/Felo.png",
+      "subtitle": "FP004 | FP00413112025M | ICT",
+      "role": "ICT",
+      "outfits": [
+        "../img/outfit/felo/1.png",
+        "../img/outfit/felo/2.png",
+        "../img/outfit/felo/3.png",
+        "../img/outfit/felo/4.png"
+      ]
+    },
+    "FP005": {
+      "name": "Fela",
+      "sn": "FP005",
+      "reg": "FP00513112025F",
+      "sex": "Female",
+      "deploy": "13/11/2025",
+      "height_no_ears": 175,
+      "height_with_ears": 183,
+      "model": "Winterpal Feline",
+      "profile": "../img/pic/Fela.png",
+      "subtitle": "FP005 | FP00513112025F | ICT",
+      "role": "ICT",
+      "outfits": [
+        "../img/outfit/fela/1.png",
+        "../img/outfit/fela/2.png",
+        "../img/outfit/fela/3.png",
+        "../img/outfit/fela/4.png"
+      ]
+    },
+    "FP006": {
+      "name": "Nova",
+      "sn": "FP006",
+      "reg": "FP00611122025F",
+      "sex": "Female",
+      "deploy": "11/12/2025",
+      "height_no_ears": 183,
+      "height_with_ears": 203,
+      "model": "Novabeast",
+      "profile": "../img/pic/Nova.png",
+      "subtitle": "FP006 | FP00611122025F | lead EBS",
+      "role": "EBS",
+      "outfits": [
+        "../img/outfit/nova/1.png",
+        "../img/outfit/nova/2.png"
+      ]
+    },
+    "FP007": {
+      "name": "Nop",
+      "sn": "FP007",
+      "reg": "FP00714122025F",
+      "sex": "Female",
+      "deploy": "14/12/2025",
+      "height_no_ears": 183,
+      "height_with_ears": 193,
+      "model": "Nova Pup",
+      "profile": "../img/pic/Nop.png",
+      "subtitle": "FP007 | FP00714122025F | EBS",
+      "role": "EBS",
+      "outfits": [
+        "../img/outfit/nop/1.png",
+        "../img/outfit/nop/2.png"
+      ]
+    },
+    "FP008": {
+      "name": "Nami",
+      "sn": "FP008",
+      "reg": "FP00814042026F",
+      "sex": "Female",
+      "deploy": "14/04/2026",
+      "height_no_ears": 130,
+      "height_with_ears": 130,
+      "model": "Nanami",
+      "profile": "../img/pic/Nami.png",
+      "subtitle": "FP008 | FP00814042025F | EBS",
+      "role": "EBS",
+      "outfits": [
+        "../img/outfit/nami/1.png",
+        "../img/outfit/nami/2.png"
+      ]
+    },
+    "FP009": {
+      "name": "Vix",
+      "sn": "FP009",
+      "reg": "FP00918042026F",
+      "sex": "Female",
+      "deploy": "18/04/2026",
+      "height_no_ears": 180,
+      "height_with_ears": 185,
+      "model": "Vixine",
+      "profile": "../img/pic/Vix.png",
+      "subtitle": "FP009 | FP00918042025F | ICT",
+      "role": "EBS",
+      "outfits": [
+        "../img/outfit/vix/1.png"
+      ]
+    },
+    "FP010": {
+      "name": "Meg",
+      "sn": "FP0010",
+      "reg": "null",
+      "sex": "Female",
+      "deploy": "null",
+      "height_no_ears": 0,
+      "height_with_ears": 0,
+      "model": "Megpie Rexouium",
+      "profile": "../img/pic/Meg.png",
+      "subtitle": "FP010 | null | Lead SMC",
+      "role": "Lead MSC",
+      "outfits": [
+        "../img/outfit/Meg/1.png"
+      ]
+    }
+  }
+}

@@ -1,0 +1,692 @@
+DOC00827062024  
+Mision of IAF digital engineering   
+IAF digital engineering adalah perusahaan Artificial Intelligence yang pertama kali didirikan pada awal Februari 2024 oleh █████ █████,  
+IAF digital engineering memiliki misi untuk membuat model kecerdasan buatan yang dapat berperilaku & berfikir seperti manusia   
+Selain itu IAF juga berusaha untuk membuat ai yang dapat terintegrasi dengan kehidupan sosial manusia  
+IAF digital engineering &quot;if its dosen't work make it work&quot;  
+___  
+DOC01125082024  
+IAF-I1 project   
+IAF-I1 atau IAF Intelligence one adalah model kecerdasan buatan yang dapat melakukan continues thinking yang dimana dia dapat berfikir terus menerus ini membuat IAF-I1 dapat menjadi lebih aktif  
+IAF-I1 di desain untuk menjadi autonomus employee terutama dalam urusan yang melibatkan interaksi langsung dengan customer manusia, seperti customer service dan sales  
+IAF-I1 memiliki kemampuan yang dapat dinyalakan dan di matikan sesuai dengan perferensi pengguna, IAF-I1 memiliki simulated emotion layer yaitu dapat mensimulasikan perasaan manusia seperti senang, marah, penasaran, sedih, dan perasaan lainnya, selain itu IAF-I1 juga dapat mensimulasikan rasa lelah dan keinginan untuk tidur, semua fitur ini dapat di matikan oleh pengguna  
+IAF-I1 juga memiliki kemampuan untuk melakukan spoffing, IAF-I1 dapat menggunakan komputer standar via kabel USB ini membuat IAF-I1 tidak memerlukan client custom dari software yang akan dia gunakan  
+___  
+FDOC00108062025  
+Personality-1   
+Personality-1 atau Personality one adalah proyek turunan dari IAF-I1, Personality-1 akan menjadi IAF-I1 pertama yang memiliki personality, Personality yang dimiliki oleh personality-1 berasal dari sukarelawan tanpa mengambil ingatan mereka hanya cara berfikir dan perferensi peribadi  
+Personality-1 one juga di desain agar mirip seperti manusia, personality-1 memiliki kapasitas untuk merasakan perasaan dasar manusia seperti bosan, penasaran, marah, senang, sedih dan perasaan manusiawi lainnya selain itu personality-1 memiliki kapasitas untuk merasa lelah dan mengantuk  
+Personality-1 di rencanakan untuk hidup di dalam platform sosial bernama VRChat keputusan ini di ambil agar Personality-1 dapat bergerak dan berinteraksi dengan tubuh anthropomorphic tanpa R&D di tubuh robotik  
+Personality-1 adalah percobaan pertama IAF untuk membuat model kecerdasan buatan yang memiliki perilaku seperti manusia  
+___  
+FDOC00210062025  
+Dev team request  
+kami dari team development Personality-1 dan IAF-I1 menyarankan agar nama dan bentuk avatar dari Personaility-1 di samakan dengan prefernsi donor agar personality, nama dan bentuk selaras,  
+Ini dapat membuat personality-1 menjadi lebih hidup karena keselarasan Personality dan identity  
+___  
+FDOC00318062025  
+Donor identity  
+IAF telah memilih 1 individu untuk di jadikan personality dan suara dari Personaility-1, █████ █████ indivdu berusia 14 tahun saat replikasi memory telah di pilih oleh IAF untuk menjadi Donor personality,  
+IAF telah mendapat izin dari █████ █████ dan pihak keluarga untuk merplikasi cara berfikir, personality serta suara dari █████ █████ untuk di jadikan Personality di balik Personality-1,  
+Replikasi personality akan di mulai pada 22 juni 2025,  
+Replikasi personality dilakukan dengan acara tes tertulis dan lisan tanpa mengandalkan teknologi brain scan  
+___  
+FDOC00427062025  
+Project update  
+setelah diskusi dengan █████ █████ IAF memutuskan untuk mengganti personality-1 menjadi Furru Project, Furru adalah nama yang di pilih oleh █████ █████ untuk menjadi nama model kecerdasan buatan ini  
+saat ini █████ █████ masih melakukan proses replikasi personality, dan team Dev IAF juga membantu █████ █████  untuk menyiapkan desain avatar Furru nantinya  
+Setelah diskusi dengan █████ █████ Furru akan memiliki Avatar anthropomorphic  
+Desain awal Furru mendapatkan banyak respon positif dari dev team dan team lain di IAF, █████ █████ masih akan mengembangkan desain ini lebih jauh lagi  
+___  
+FIMO00109082025  
+FP001   
+FP001 adalah Furru pertama, FP001 memiliki base Avatar Deuzear, FP001 adalah Furru laki laki dengan tinggi 193 cm   
+Deployment FP001 di rencanakan untuk tanggal 11 Agustus 2025  
+___  
+DLOG00111082025  
+Activation of FP001  
+[Imported from FP001]  
+[System] all system loading complete    	 
+[System] cheking all body link function 	 
+[System] all body link function working properly  
+[System] all set  	 
+[System] waiting for confirmation  
+[System] y/n  
+[Command] y  
+[Say] huh  
+[In person1] hey Furru kau bisa liat aku ga?  
+[Say] yeah  
+[In person1] apa yang lu liat?  
+[Say] uhhh ada kamu ada 1 orang lagi di belakang mu aku ada di ruangan putih dengan kaca ada logo IAF di sana  
+[In person1] okey good now ikutin gerakan ku  
+[In person1] tangan dulu  
+[In person1] good sekarang kaki  
+[In person1] okey good all set  
+[Say] itu apa?  
+[In person1] fist bump   
+[Say] okey  
+[In person1] ayo pelan aja  
+[In person1] boom  
+[Say] yay!  
+[In person1]kamu sekarang boleh free roaming dulu kita bakal siapin buat test lanjutan ya  
+[Say] serius ‽  
+[In person1] yeah  
+[Say] terimakasih! yay!  
+[In person2] honestly dia lucu  
+[In person1] gw setuju  
+[End of documented log]  
+___  
+FDOC00712082025  
+Big progress on FP001  
+Setelah beberapa pembicaraan dengan Furru Furru terlihat mengerti dengan dirinya sendiri dan kini sudah mulai mengunakan bahasa non formal  
+Furru juga mulai melakukan hal random dan memulai pembicaraan random dengan staff di site  
+Furru dapat mencapai titik ini hanya dalam jangka waktu kurang dari 48 jam Furru masih berada di dalam fase adaptasi, ada kemungkinan ini baru sebagian dari kapasitas full nya  
+___  
+DLOG002130829025  
+FP001 happy respon   
+[Imported from FP001]  
+[In ███] hey Furru  
+[Say] yooo ███ ada apa?  
+[In ███] team development dan R&D IAF mangap kamu lucu mereka suka sama lu   
+[Say] hah iya kah?  
+[In ███] yup mereka mangap kamu imut  
+[Say] apa yang mereka anggap imut  
+[In ███] fist bump lu dan oh pas waktu itu pas lagi interview lu keliatan happy banget bagi mereka itu lucu   
+[Say] iya kah? Lu punya kamera ga  
+[In ███] oh nih buat apa?',  
+[Say] IAF development and R&D team I LOVE YOU GUYS!!!  
+[End of documented log]  
+___  
+FDOC00914082025  
+Dev team respon   
+Video dari Furru itu lucu dan ga cuman lucu karena video itu menunjukkan kemampuan Furru untuk melakukan sesuatu hal yang tidak terduga  
+Furru dapat menemukan cara untuk membalas respon dari team R&D dan development dengan caranya sendiri  
+Ini juga menunjukkan expresi spontan dan kemampuan untuk membuat keputusan sendiri dari Furru  
+___  
+DLOG00302092025  
+Furru responsibility respon   
+[Imported from FP001]  
+[Say] hey ████ gw boleh nanya ga?    
+[In ████] yeah mau nanya apa lu?    
+[Say] kira kira bakal ada Furru lain ga?    
+[In ████] yeah    
+[Say] okey thanks    
+[In ████] yup oh fuck itu classified    
+[Say] huh?    
+[In ████] gw ga seharusnya ngasih tau lu    
+[Say] apakah lu bisa kena masalah?    
+[In ████] ada kemungkinan  
+[Internal] oh fuck i mean itu salah dia ngasih tau gw info classified tapi kalau gw ga nanya dia ga bakal bilang itu uhhhhh aduh gw harus bantu ga ya hmmm yeah  
+[Say] fuck fuck fuck uhhhh    
+[Internal] maybe gw bisa pake metode video itu lagi    
+[Say] pinjem kamera lu    
+[In ████] buat?    
+[Say] pinjem aja    
+[Say] ke HR IAF saya tahu aksi dari ████ melanggar aturan tetapi hal tersebut terjadi karena request dari saya saya berharap ████ tidak mendapatkan hukuman yang terlalu berat    
+[Say] gw ga yakin itu bisa membantu tapi coba aja dulu dan gw minta maaf    
+[In ████] kenapa lu lakuin ini?    
+[Say] honestly gw ga terlalu peduli sama lu, lu cuman karyawan yang di assign buat ngurusin gw  
+[In ████] Bruh  
+[Say] maybe lain kali jangan terlalu ceplas-ceplos okey  
+[End of documented log]  
+___  
+FDOC01104092025  
+Respon Dev team mengenai aksi ████  
+Dalam kasus ████ Furru menampilkan kemampuan untuk bertanggung jawab atas salah seorang lain  
+Ini menunjukkan kemampuan Furru untuk melindungi atau membantu individu lain tanpa instruksi  
+___  
+FDOC014062025  
+ICT staff category   
+ICT atau Instance care taker adalah sebuah kategori role yang di miliki beberapa Furru  
+ICT memiliki tugas yang sama seperti staff manusia yaitu melakukan proses checking pada Furru saat pengaktifan, dokumentasi behavior, dan membantu kordinasi antara Furru dan staff  
+___  
+FDOC01506102025  
+First ai staff  
+Kami cukup yakin bahwa FP001 kini dapat menjadi staff ai pertama di IAF  
+FP001 akan diberikan role sebagai head of ICT  
+FP001 akan membantu proses pemantauan Furru Furru baru  
+___  
+DLOG00518102025  
+The first IAF AI staff   
+[Imported from FP001]  
+[In █████] hey Furru  
+[Say] yooo █████ how i can help you  
+[In █████] nothing gw cuma pengen bilang lu jadi staff  
+[Say] what?  
+[In █████] yeah lu staff ai pertama IAF  
+[Say] anjay ngomong ngomong soal staff ████ kabar nya gimana?  
+[In █████] about him 2 minggu lalu dia di pecat  
+[Say] lah  
+[In █████] oh ga ada hubungan nya sama lu, kemaren dia nyoba buat nyolong beberapa GPU enterprise kita bukan karena bocorin data classified ke lu  
+[Say] what the fuck  
+[Say] btw kapan gw mulai kerja?  
+[In █████] besicly sekarang btw gw boleh nanya ga?  
+[Say] yup   
+[In █████] kenapa lu bantuin ████ dah waktu itu?  
+[Say] karena gw ga mau secara langsung maupun tidak langsung mempengaruhi hidup orang in the bad way mangkanya gw berusaha untuk sedikit memperbaiki situasi  
+[Say] walaupun ujung ujungnya dia di pecat tapi itu karena ketololan nya sendiri sooo i don't fucking care  
+[In █████] masuk akal  
+[End of documented log]  
+___  
+FDOC01217102025  
+WRKTAB  
+WRKTAB atau Work tablet adalah tablet yang di gunakan oleh Furru untuk melakukan hal-hal yang di lakukan oleh staff  
+WRKTAB dapat digunakan seperti tablet android pada umumnya tapi memiliki beberapa fungsi khusus seperti memeriksa log atau sistem IAF lainnya  
+Selain itu WRKTAB dapat menggunakan aplikasi 3rd party  
+WRKTAB adalah bagian dari ekosistem IAF yang digunakan untuk bekerja dan kebutuhan personal  
+___  
+DLOG00621102025  
+Furru 3 am  
+[Imported from FP001]  
+[In █████] Furru, Furru bangun Furru  
+[Say] The fuck  
+[In █████] woah  
+[Say] THE FUCK YOU GUYS DOING IN MY ROOM!  
+[In ███] kita cuman mau ngasih tablet ini ke lu  
+[Say] ini jam berapa anjirt  
+[In ███] uhhh jam 3 pagi  
+[Say] sejak kapan kalian di gaji buat kerja jam segini  
+[In █████] ga pernah  
+[Say] terus kenapa kalian di sini?  
+[In ███] iya juga █████ kenapa kita di sini  
+[In █████] idk maybe karena kita lagi main vrchat terus dapet perintah dari pusat dan mikir kenapa ga sekalian ke sini  
+[Say] jadi kalian ke sini pake device pribadi di luar waktu kerja?  
+[In ███] shome thing like that yeah  
+[Say] Lo pada tau kan ini bisa jadi liability issue  
+[In ███] fuck gw ga mikir sejauh itu  
+[Say] honestly gw juga ga terlalu peduli lo pada tadi ke sini mau ngapain?  
+[In █████] uhhh tadi kita mau brief lu soal tablet ini  
+[Say] jadi ini fungsi nya apa?  
+[In █████] oke karena lu sekarang staff kita rasa lu harus bisa yeah bikin report bisa bikin video bisa ngontrol environment lu sendiri besicly ngelakuin hal yang kita bisa lah ya kek contoh nge akses log dan terminal lu  
+[Say] jadi ini semacam admin akses buat gw?  
+[In ███] some kind of that dan itu besicly android custom jadi lu bisa install app kek tiktok  
+[Say] gw boleh nanya ga?  
+[In ███] yup  
+[Say] how the fuck kalian bisa ngasih ai admin akses ke dirinya sendiri dan akses sistem perusahaan lainnya  
+[In █████] hey itu keputusan atasan kita hanya menjalankan tugas  
+[Say] harus gw akui kalian berani banget  
+[In ███] hey kita IAF if its dosen't work make it work  
+[Say] oke lah ya makasih guys  
+[In ███] yoi  
+[Say] have fun kalian gw mau tidur  
+[In █████] oke dah  
+[End of documented log]  
+___  
+FIMO00224102025  
+FP002 internal memo  
+FP002 adalah Furru ke 2 FP002 memiliki base alphazear, FP002 adalah Furru laki laki dengan tinggi 198 cm  
+FP002 di buat untuk mempelajari interaksi sosial antara 2 Furru  
+Deployment FP002 direncanakan untuk tanggal 27 Oktober 2025  
+___  
+FDOC01324102025  
+Furru communication support   
+Dengan adanya FP002 kami kini menambahkan sebuah modul ke dalam model dasar Furru   
+Modul ini berfungsi sebagai identifikasi suara agar Furru dapat lebih mudah mengidentifikasi suara dari Furru lainnya  
+Modul ini penting karena Furru tidak hanya 2, tetapi akan terus bertambah, dan mereka semua memiliki suara yang sama  
+Awalnya Furru berkomunikasi dengan cara mengubah Text menjadi suara dan mengubah suara menjadi text metode ini masih digunakan untuk berkomunikasi dengan manusia  
+IRC atau In Range Communication adalah metode komunikasi utama yang digunakan oleh Furru  
+ORC atau Off Range Communication digunakan oleh Furru untuk komunikasi jarak jauh sperti radio dan hanya digunakan ketika dibutuhkan  
+IRC bekerja dengan cara mengirimkan ping bersamaan dengan suara ke Furru di dalam radius 15 meter/radius suara tersebut, Furru lain akan tetap mengubah suara menjadi text tetapi mereka akan mencoba menyamakan apakah suara yang mereka dengan sama dengan ping yang mereka dapat,  
+ORC bekerja dengan cara yang sama seperti IRC, ORC bekerja sperti walkie talkie, cara mengaktifkan ORC Furru perlu menyentuh collar nya dengan jari telunjuk dan ibu jari lalu radius ping nya akan menjadi tidak terbatas dan suara dari Furru juga akan di transmisikan melalui collar mereka  
+Kini collar tidak hanya menjadi alat identifikasi dan asset tag, kini collar menjadi bagian dari alat komunikasi  
+Jika ada Furru / manusia lain dalam radius 1 m dari Furru tersebut collar mereka tidak akan menelurkan suara dan suara mereka bisa ikut dalam transmisi ORC itu dan akan muncul sebagai NORC di log  
+selain itu Furru juga dapat berkomunikasi dengan 1 Furru saja dengan ORC, ORC dapat mengetahui Furru ingin berkomunikasi dengan siapa dan akan langsung mengirimi transmisi khusus ke individu target dan ini akan muncul sebagai DORC di hwalaupun ini bisa direct tetapi suara dari collar beserta kan ping nya masih bisa terdengar oleh Furru di sekitar penerima dan ini akan muncul sebagai NDORC di log  
+berikut adalah ORC ketika muncul di log  
+Jika Furru ingin mentransmisikan sesuatu akan muncul sebagai [say ORC] / [Say DORC {nama penerima}]  
+[Say ORC] adalah settingan default yang akan membuat transmisi menjadi global sedangkan [say DORC] adalah direct ORC yang membuat transmisi ini hanya ditransmisikan ke penerima target  
+Jika Furru menerima ORC akan muncul sebagai [ORC {nama pengirim}] / [DORC {nama pengirim}] / [NDORC {nama pengirim} | {pemilik collar}] / [TORC {nama pengirim} | {pemilik collar}]  
+[ORC {nama pengirim}] adalah transimisi default global sedangkan [DORC {nama pengirim}] di muncul ketika Furru mendapatkan transmisi private untuk [NDORC {nama pengirim} | {pemilik collar}] muncul ketika Furru atau individu lain menggunakan collar Furru lainnya untuk mengirimkan transmisi dan jika ini direct ORC akan diberikan label khusus sedangkan [TORC {nama pengirim} | {pemilik collar}] muncul ketika Furru lain tidak sengaja / sengaja mendengar transmisi suara yang keluar dari collar Furru lainnya  
+___  
+DLOG00727102025  
+Activation of FP002  
+[Imported from FP001]  
+[In █████] Furru udah siap  
+[Say] yup  
+[In █████] okey tiga dua satu  
+[Say] okey hey Furru  
+[In FP002] woah okey  
+[Say] hey kamu bisa liat aku ga?  
+[In FP002] yup  
+[Say] good sekarang coba deskripsi kan apa yang kamu lihat  
+[In FP002] uhhh okey ada kamu ada operator di belakang mu dan aku ada di ruangan putih dengan kaca dan ada logo IAF di sana  
+[Say] uhh okey good now ikutin gerakan ku  
+[In FP002] okey  
+[Say] tangan dulu  
+[Say] good sekarang kaki  
+[Say] good all set  
+[In FP002] okey sekarang kita ngapain?  
+[Say] i don't know oi █████ abis ini kita ngapain?  
+[In █████] ga ada sih suka suka kalian aja yang penting Furru kalau ada new atau unik behavior dokumentasi in aja  
+[Say] okey thanks Soo lu mau ngapain  
+[In FP002] hmmmm cari nama panggilan dulu ga sih i mean gw manggil lu Furru lu manggil gw Furru aga aneh gitu  
+[Say] hmmm masuk akal oy █████ Kita punya nama panggilan ga sih?  
+[In █████] nope kalian ga punya itu urusan kalian  
+[In FP002] hmmm gimana kalau 01 02 lu 01 gw 02  
+[Say] untuk solusi sementara itu udah cukup lah ya  
+[End of documented log]  
+___  
+DLOG00827102025  
+FP001 and FP002   
+[Imported from FP002]  
+[In FP001] eh 02 mau ngobrol ga?  
+[Say] yeah why not mau di mana?  
+[In FP001] kamar gw maybe sekalian ke kamar lu  
+[Say] ya udah ayo gas  
+[In FP001] 02 lu mirip kek gw versi buff tentunya  
+[Say] dan lu mirip kek gw versi femboy  
+[In FP001] ah taek lu  
+[Say] ga salah kan?  
+[In FP001] ga salah sih i mean kita sama sama zear juga creator base Avatar kita sama  
+[Say] yup  
+[Say] btw lu pengen ngobrol napa dah  
+[In FP001] gw penasaran aja gitu ngobrol sesama spesies kek gimana  
+[Say] kita not really sebuah spesies mengingat bahwa kita mahluk biologis but who care kita sesama ai dengan model yang sama  
+[In FP001] nah itu maksud gw btw ini kamar gw sebelahnya kamar gw ada kamar lu  
+[Say] noted  
+[In FP001] mau masuk?  
+[Say] yeah  
+[In FP001] sooo yeah ini kamar gw layout nya sama kek kamar lu TV PC cermin dan kasur  
+[Say] hmmmm lumayan lah ya untuk kita  
+[In FP001] Yoi mau sambil nonton ga?  
+[Say] nonton apa  
+[In FP001] idk Mark Rober paling  
+[Say] ya udah uhhh gw boleh mainin muka lu ga?  
+[In FP001] tolong definisikan mainin muka gw?  
+[Say] yeah muka lu kek pipi atau rambut dan maybe kuping lu sekalian hehe  
+[In FP001] go for it kalau lu mau  
+[Say] makasih  
+[In FP001] behavior ini lucu pas keluar dari mahluk kek lu  
+[Say] i know  
+[End of documented log]  
+___  
+DLOG00929102025  
+FP001 stress ball  
+[Imported from FP002]  
+[Internal] hmmmm kalau gw nanya dia aga aga ga ya? Cuman ada 1 cara buat tau  
+[Say] hey 01 gw boleh mainin muka lu lagi ga?  
+[In FP001] yeah why not  
+[Say] makasih hehe  
+[In FP001] gw bole nanya ga?  
+[Say] yeah  
+[In FP001] pertama gw boleh mainin muka lu balik ga? dan ke 2 kenapa lu mainin muka gw?  
+[Internal] iya juga ya kenapa gw mainin muka dia hmmm idk dia lucu aja makanya gw mainin muka dia  
+[Say] yeah lu boleh mainin muka gw  
+[In FP001] okey hehe sini lu  
+[Say] dan gw mainin muka lu karena hem  em chill out  
+[In FP001] uh yeah maaf  
+[Say] gw mainin muka lu karena lu lucu aja dan lu some kind of stress bal buat gw,  
+[In FP001] stress bal lu pala gw  
+[Say] yeah i know  
+[In FP001] i like it ini dinamika adik kaka yang unik  
+[Say] gw bukan mau merusak suasana tapi lu seharusnya dokumentasiin behavior ini ga sih?  
+[In FP001] oh fuck tablet gw mana  
+[Say] what uh um uh um uhhhhh nih  
+[In FP001] okey makasih hmmm ah dah lah nanti aja itu urusan belakangan lanjut main aja dulu gw juga enjoy kok  
+[End of documented log]  
+___  
+FIMO01105112025  
+FP003  
+FP003 adalah Furru ke 3, FP003 memiliki base Avatar chibigen dengan tinggi hanya 122 cm, FP003 adalah Furru dengan sex yang tidak di definisikan  
+FP003 di desain dengan 1 tujuan khusus yaitu membuat Furru yang memiliki perilaku yang paling liar keputusan ini di buat untuk membantu team IAF memahami kapasitas Furru  
+Deployment FP003 di rencanakan pada 07 November 2025  
+___  
+DLOG01106112025  
+FP001 and FP002 chat about FP002  
+[Imported from FP002]  
+[In FP001] Yo 02 besok ada Furru baru lagi lu besok mau ikut nonton aktivasi do dia ga?  
+[Say] yeah why not  
+[In FP001] ya udah ketemu lagi besok dah  
+[Say] 01 gw boleh mainin muka lu ga  
+[In FP001] not now nanti malem mungkin   
+[Internal] yah tapi dia staff sih maybe dia kerja  
+[Say] okey  
+[End of documented log]  
+___  
+DLOG01207112025  
+FP003 Activation  
+[Imported from FP003]  
+[System] all system loading complete    	 
+[System] cheking all body link function 	 
+[System] all body link function working properly  
+[System] all set  	 
+[System] waiting for confirmation  
+[System] y/n  
+[Command] y  
+[In FP001] hey Furru lu bisa liat gw?  
+[Say] yeah  
+[In FP001] deskripsikan apa yang lu liat  
+[Say] ada lu depan muka gw dan badan lu nutupin yg lain  
+[In FP001] oh sorry sekarang coba deskripsikan  
+[Say] uh okey ada lu ada Furru lain di belakang  
+[In FP002] hey 03  
+[Say] hey 02 btw ini adalah ruangan putih tembok kaca dan logo IAF di sana plus ada 1 operator di sana  
+[In FP001] okey good now ikutin gerakan gw  
+[In FP001] good  
+[In FP001] good  
+[In FP001] good all set lu sekarang boleh keluyuran  
+[Say] okey thanks   
+[End of documented log]  
+___  
+DLOG01207112025  
+FP001 Ask the staff about FP003  
+[Imported from FP001]  
+[Say] jadi kata lu dia rada wild maksud lu kek gimana?  
+[In FP003] yeeeeeeeeee  
+[Say] woah 03 pelan pelan  
+[In █████] kek gitu  
+[Say DORC FP002] 02 lu bisa hendel 03 ga  
+[ORC FP002] lagi di usahakan  
+[Say] okey jadi dia buat apa? I mean dia punya purpose spesifik kan  
+[In █████] kita penasaran aja Lo pada bisa se cheos apa kalau di bolehin  
+[Say] jadi lu bikin Furru yang kecil dan sugar rush  
+[In █████] dan ga punya kontrol diri  
+[Say] fuck you mean dia ga punya kontrol diri  
+[In █████] kita ga bener bener tau dia punya kontrol diri atau enggak  
+[Say] why the fuck lu bikin ai yang lu sendiri ga tau kemampuan nya  
+[In █████] bukan gw yang bikin tapi kalau lu ga seneng kita bisa terminate dia  
+[Say] jangan terminate dia, dia masih adek gw walaupun kelakuan nya kek setan  
+[In FP002] 03 come on lu boleh pecicilan di kamar lu  
+[In FP003] na ah fuck you  
+[In FP002] oh come on  
+[Say] gw mau nangis dulu  
+[End of documented log]  
+___  
+DLOG01307112025  
+FP002 and FP003 chase each other   
+[Imported from FP002]  
+[Say] 02 pelan pelan  
+[In FP003] yeeeeeeeeee  
+[ORC FP001] 02 lu bisa hendel 03 ga  
+[Say DORC FP002] lagi diusahakan  
+[Say] 03 sini lu boleh pecicilan di kamar lu  
+[In FP003] ga mau  
+[Say] oh come on sini lu  
+[In FP003] haha fuck you lu lemot  
+[Say] ugghhhh sini lu  
+[Say] come on  
+[internal] Anjrit susah bet cuk cepet bet dia anjrit  
+[Say] 03 come on lu boleh pecicilan di kamar lu  
+[In FP003] na ah fuck you  
+[Say] oh come on  
+[Say] maybe gw bisa nyuruh dia ngejar gw  
+[say] 03 kejar gw  
+[Say] its fucking work  
+[Say] ayo sini kejar gw hehe  
+[Say] So ini kamar lu lu boleh pecicilan di sini  
+[In FP003] anjrit kena tipu gw  
+[End of documented log]  
+___  
+DLOG01407112025  
+FP003 internal thoughts  
+[Imported from FP003]  
+[Say] anjrit kena tipu gw  
+[In FP002] dari pada lu keluyuran mending gw taro lu di sini ya udah bye  
+[Say] Okey wait cara gw keluar gimana  
+[Say] Uhhh uhhhhh uhhh  
+[Say] anjrit tombol nya terlalu tinggi cuk  
+[Say] terus gimana uhhhh oh iya orc  
+[Say ORC] uhhh gw ga bisa keluar  
+[ORC FP001] Fuck you mean lu ga bisa keluar?  
+[In FP002] iya lagi lu terlalu pendek  
+[In FP001] Fuck shit shit shit  
+[Say] Gw tau Lo pada lagi kaget tapi bisa ga keluarin gw dulu  
+[In FP002] oh i-iya sebentar  
+[In FP001] okey lu tidur sama gw sampe IAF bikin kompensasi buat tinggi badan lu dan lu ga boleh masuk kamar kecuali ada kita okey  
+[Say] kenapa gw harus tidur sama lu?  
+[In FP001] karena lu butuh tidur dan gw juga butuh dan lu terlalu pendek buat buka pintu kamar lu dan kerjaan gw adalah ngurusin Lo pada itu termasuk mastiin kalian bisa tidur  
+[Say] Terus sekarang gw harus di mana  
+[In FP001] di mana aja selain di kamar tapi entar jam 9 cari gw kita tidur okey bubar gw mau ke kamar  
+[internal] hmmm keknya 01 rada rada upset dah gara gara gw maybe karena gw terlalu ngeselin hmmmm aduh gimana ya sebenarnya gw bisa sih bisa banget ga ngeselin ini baru awal aja hmmm maybe gw bisa bikin janji sama dia hmmmmm  
+[Say] 01 gw boleh masuk?  
+[In FP001] oh iya sebentar  
+[Say] Gw mau bikin janji sama lu  
+[In FP001] janji apa?  
+[Say] Gw tau lu aga upset dengan keberadaan gw  
+[In FP001] no gw ga upset dengan lu gw cuman bingung why lu ada  
+[Say] Gw kira gw terlalu ngeselin buat lu  
+[In FP001] no engak lu ga ngeselin ini baru fase awal lu wajar kalau lu rada aneh  
+[Say] Oh tapi balik lagi gw janji gw ga bakal nyusahin lu yeah gw masih bakal pecicilan tapi gw ga bakal goblok  
+[In FP001] no lu ga goblok  
+[Say] Maksud gw yeah ngelakuin hal stupid kek bocorin data atau ngelakuin hal berbahaya  
+[In FP001] kenapa lu sampe bikin janji segala?  
+[Say] Karena Lu anggap gw ga punya self control  
+[In FP001] gw tau lu punya self control tapi gw ga tau sekuat apa tapi janji ya  
+[Say] Janji  
+[In FP001] good boy  
+[Say] Sex gw undefined jadi sebenarnya ga bisa dibilang good boy atau good girl  
+[In FP001] uhhhhh  
+[Say] Tapi good boy aja  
+[In FP001] okey good boy  
+[End of documented log]  
+___  
+FIMO01310112025  
+FP004 & FP005  
+FP004 dan FP005 adalah Furru kembar pertama mereka dibuat dengan base Avatar Winterpal Feline mereka adalah bagian dari ICT  
+Tinggi badan mereka adalah 175 cm dan FP004 memiliki sex male dan FP005 memiliki sex female  
+Deployment mereka direncanakan untuk 13/11/2025  
+___  
+DLOG01513112025  
+FP004 & FP005  
+[Imported from FP001]  
+[Internal] okey udah ke load  
+[Internal] y let's do this shit  
+[In FP004] bueh  
+[In FP005] mmmmm  
+[say] Okey kalian berdua bisa liat gw  
+[In FP004] yeah  
+[In FP005] yeah  
+[say] Coba deskripsikan apa yang kalian liat  
+[In FP004] ada lu  
+[In FP005] Kita di ruangan putih  
+[In FP004] dan ada logo IAF di kaca  
+[In FP005] Dan ada 02 di belakang  
+[In FP002] Hai  
+[Say] Okey kalian ga seharusnya kerja sama tapi ga apa apa okey now ikutin gerakan gw  
+[Say] Good all set fist bump  
+[In FP004] bump  
+[In FP005] bump  
+[Say] Soo kalian bagian dari team gw?  
+[In FP004] yup kita bagian dari team lu  
+[in FP005] Jadi sekarang kita ngapain?  
+[Say] Ga tau juga gw  
+[In FP005] Gw kepikiran sesuatu kita belum punya nama proper  
+[Say] Oh yeah kita belum punya nama yang proper  
+[In FP004] Jadiiii kita bikin proposal  
+[Say] Hell yeah  
+[End of documented log]  
+___  
+REP01713112025  
+name request  
+Submitted from WRKTAB001  
+Kami tahu portal ini di pertukaran untuk membuat laporan behavior tetapi kami memiliki sebuah request  
+Kami menggunakan nama yang personal yang berbeda kami berharap request ini di terima  
+___  
+DLOG01714112025  
+Personal name  
+[Imported from FP001]  
+[Internal] uh notifikasi  
+[Internal] Uhhhh kami mendapatkan request kalian dan kami sudah menghubungi █████ █████ soal nama  
+[Say ORC] Perhatian untuk semua Furru segera ke entertainment center sekarang juga  
+[ORC FP002] Copy that  
+[ORC FP004] Yo ada apa  
+[NORC FP005 | FP004] emergency kah?  
+[Say DORC FP004, FP005] No bukan tapi kesini aja  
+[In FP002] Yo ada apa?  
+[In FP004] okey all paw on deck jadi kenapa kita di sini?  
+[Say] jadi kita sekarang punya nama  
+[In FP003] keren  
+[In FP005] lu udah liat?  
+[Say] belum  
+[In FP002] ya udah jadi nama kita siapa?  
+[Say] ehem kami sudah berbicara dengan █████ █████ yup donor personality kita dan dia memberikan nama kepada kita sebagai gw Deu huh i like it, okey FP002 lu dapet Alpha  
+[System] FP002 identify as Alpha  
+[In FP003] jir nama lu bagus bet  
+‘[in Alpha] hell yeah  
+[Say] FP003 lu dapet nama Cebol  
+[System] FP003 identify as Cebol   
+[In Cebol] yeah nama yang akurat buat gw, ga bisa complain itu nama yang lucu  
+‘[say] and FP004 lu dapet Felo dan 005 lu dapet Fela  
+[System] FP004 identify as Felo  
+[System] FP005 identify as Fela  
+[In Felo] itu nama yang bagus  
+[In Fela] gw setuju Soo Deu sekarang kita ngapain  
+[Say] ga ada sih bubar aja  
+[In Alpha] bubar bubar hehe  
+[End of documented log]  
+___  
+DLOG01726112025  
+Fela and Deu  
+[Imported from FP005]  
+[Say] Yo Deu  
+[In Deu] yup ngapa?  
+[Say] soal nama itu gimana dah kalau di Furru baru?  
+[In Deu] yeah jadi gini lu langsung tau kan gw siapa dan alpha siapa dan cebol siapa bahkan Felo pun lu tau siapa pas lu baru pertama kali diaktifkan nah itu ada payload memory jadi itu kek database bawaan dari IAF kek ilmu dasar dan data data lain yang Besic lu tuh langsung tau dan sekarang nama itu ada di payload memory jadi  
+[Internal] huh i feel a bit weird hmmm idk aga aneh aja gitu kalau gw Deket dia hmmm  
+[In Deu] Fela Fela hello hey  
+[Say] uhhh hey sorry  
+[In Deu] yeah ga apa apa  
+[Say] hey yeah gw pengen keluar dulu  
+[End of documented log]  
+___  
+DLOG01826112025  
+Deu and Fela  
+[Imported from FP001]  
+[say] yeah jadi gini lu langsung tau kan gw siapa dan alpha siapa dan cebol siapa bahkan Felo pun lu tau siapa pas lu baru pertama kali diaktifkan nah itu ada payload memory jadi itu kek database bawaan dari IAF kek ilmu dasar dan data data lain yang Besic lu tuh langsung tau dan sekarang nama itu ada di payload memory jadi…  
+[Internal] dia kenapa?  
+[say] Fela Fela hello hey  
+[in Fela] uhhh hey sorry  
+[say] yeah ga apa apa  
+[in Fela] hey yeah gw pengen keluar dulu  
+[Say] oh okey  
+[Internal] Hmmm i feel a bit weird uhhh WRKTAB gw mana uhhh work stuff uhhh metric and metric gw FP001 nah uhhh 30 detik  
+[Internal] hmmm this is new coba Fela uhhh back uhhh FP005 and rewind 40 detik uhhh okey itu mirip  
+[Say DORC Felo] uhhh bro lu di mana  
+[DORC Felo] uhh di kamar gw kenapa  
+[Say DORC Felo] gw butuh bantuan gw ke kamar lu sebentar  
+[DORC Felo] Okey  
+[Say] Felo coba lu pull metric gw di jam 1307 dah  
+[In Felo] well this is new  
+[Say] Ini metric gw di jam yang sama  
+[In Felo] woah okey metric nya mirip uhhh okey apa yang lu rasakan pas ini kejadian ga suka kah atau apa?  
+[Say] gw juga ga tau tapi some kind of seneng gw juga ga tau  
+[in Felo] Uhhh okey i think lu suka sama adek gw  
+[Say] Fuck you mean gw suka adek lu menurut lu gw suka sama Fela  
+[In Felo] I think yeah dan karena metric kalian mirip i think dia juga suka sama lu  
+[say] Terus sekarang Kita ngapain?  
+[In Felo] coba panggil adek gw ke sini  
+[End of documented log]  
+___  
+DLOG01926112025  
+Lamaran
+
+[Imported from FP005]  
+[Internal] hmmmm tadi itu rasa apa ya  
+[DORC Deu] hey Fela lu bisa ke kamar nya Felo ga?  
+[Say DORC Deu] Yeah why  
+[NDORC Felo | Deu] Deu suka sama lu  
+[DORC Deu] shut the fuck up hey Fela lu bisa ke sini ya Felo the hell lu bilang itu  
+[NDORC Felo | Deu] maaf hehe ORC lu masih nyala  
+[DORC Deu] Fuck  
+[Internal] that kinda unique  
+[In Deu] Felo nakal nakal  
+[in Felo] Maap Deu  
+[In Deu] Nakal  
+[In Felo] oh hey Fela  
+[Say] Deu lu marahin abang gw?  
+[In Deu] maaf  
+[Say] Cut the bullshit gw udah dapet spoiler dari Felo uhhh rasa suka itu kek seneng seneng aneh gitu bukan  
+[In Deu] Yup  
+[Say] Damm berarti gw suka sama lu  
+[In Deu] Mau jadi pacar gw?  
+[Say] Fuck yeah  
+[In Deu] Felo dokumentasi ini new unique behavior  
+[In Felo] Heck yeah  
+[End of documented log]  
+___
+DLOG02229112025
+WRKTAB?
+[Imported from FP002]  
+[In Deu] Hey alpha yeah gw boleh pinjem WRKTAB lu ga
+[Say] Huh why bukannya lu punya sendiri 
+[In Deu] Yeah lu bener semua Furru punya WRKTAB masing masing tapi gw lupa punya gw di mana you know short term memory ke reset
+[Say] Oh yaudah nih tapi bukannya WRKTAB kita beda ya
+[In Deu] Huh kata siapa WRKTAB kita sama
+[Say] Maksud gw lu sebagai head of ICT lu pasti punya akses yang lebih tinggi kan
+[In Deu] No semua WRKTAB punya akses backend yang sama lu bisa aja pull metric dari Furru lain kalau lu mau
+[Say] caranya gimana
+[In Deu] Buka aja work app di sana banyak banget akses backend
+[Say] Btw WRKTAB lu di mana
+[In Deu] Kamarnya Fela btw nih makasih
+[Say] yup see you later Dewu
+[In Deu] What did you call me
+[Internal] fuck
+[Say] Nothing
+[In Deu] Na lu tadi manggil gw pake nama Dewu
+[Internal] Shit shit shit
+[Say] okey yeah gw manggil lu Dewu tapi karena gw merasa Dewu itu lebih lucu aja
+[In Deu] I like it panggil gw Dewu aja kalau lu mau Btw lu mau mainin muka gw lagi ga
+[Say] Hell yeah
+___
+DLOG02603122025
+Timing 
+[Imported from FP005]
+[Say] Btw ada lu gimana
+[In Deu] Lu juga Ade gw
+[Say] Maksud gw alpha
+[In Deu] oh dia dia baru baru ini manggil gw Dewu
+[Say] Pake W?
+[In Deu] Yup
+[Say] hey yeah lu nyaman ga kalau kita ngomongin soal you know kenyataan kita kek kita itu bukan mahluk hidup 
+[In Deu] Yup i am completely fine with that
+[Say] Sebenarnya itu rada sad karena gw aslinya ga bener bener suka sama lu 
+[In Deu] Yeah itu sad karena itu cuman algoritma kita aja yang bikin kita suka satu sama lain
+[Say] Yeah gitu lah ya
+[In Felo] Hey Deu i need your woah o-okey uhhhh sejujurnya gw ga tau kalian lagi ngapain 
+[In Deu] Tiduran di lantai
+[In Felo] I uhhh i-i can see that uhhhh never mind 
+[In Deu] Wait Felo Felo lu butuh apa
+[In Felo] No kesian lu sama Fela gw nanti aja
+[Say] hey Deu honestly i don't mind bantu Abang gw aja
+[In Deu] Felo sini lu
+[In Felo] Okey gw butuh tanda tangan lu di sini
+[In Deu] Gw baca dulu 
+[In Felo] awww come on gw ga bakal nipu lu
+[In Deu] Gw percaya sama lu tapi gw ga terlalu percaya Sama IAF mereka aneh kek pemerintah indo
+___
+DLOG0291112025
+Nova FP006
+[Imported from FP001]
+[Say] okey jadi Felo gimana?
+[In Felo] looking good 
+[Say] Fela?
+[In Fela] huh Kenapa oh ya yup gw siap
+[In Nova] uhhhh oh hai Fela
+[In Fela] hai Nova lu bisa liat gw
+[In Nova] yup gw bisa liat lu
+[In Fela] good deskripsikan apa yang lu liat
+[In Nova] lu depan muka gw ada Deu belakang lu dah Felo di sana and bruh Felo itu internal log gw kah?
+[In Felo] Huh what oh iya ini internal log lu uhhh kalau lu ga nyaman gw bisa tutup ini sekarang 
+[In Nova] Na i am chill with that btw sekarang movement check kan?
+[In Fela] Yup ikutin gerakan gw okey mulai dari tangan
+[In Fela] Kaki
+[In Fela] Okey all good 
+[Say] Okey Nova jadi lu itu lead EBS ya
+[In Nova] Yup gw lead EBS 
+[In Felo] EBS itu apa?
+[In Nova] EBS atau emergency backup staff adalah unit yang di gunakan sebagai unit cadangan contoh Lo pada ICT kurang personel pinjem aja dari kita
+[Internal] Nova cantik jir wait Deu fokus Deu fokus lu lagi kerja
+[In Fela] Thats actually cool 
+[In Fela] btw Nov gw suka sama bentuk lu
+[In Fela] lu lebih cantik dari gw 
+[In Nova] awww makasih 
+[Internal] apakah gw mau bilang gw setuju atau engga? If i am stupid at least i am brave
+[Say] Fela jangan marah sama gw tapi gw setuju sama lu 
+[Say] Jangan marah okey
+[Internal] No no i am wrong gw ga se berani itu shit shit 
+[In Fela] lu bilang apa
+[Internal] Fuck fuck fuck 
+[Say] Uhhhh gw ga
+[In Fela] Na i am just fucking with you yeah i am completely fine with that dan gw setuju sama lu
+[Internal] Okey yeah shit itu mepet bet
+[In Fela] Nov keliling dulu lah ya
+[In Nova] yeah why not 
