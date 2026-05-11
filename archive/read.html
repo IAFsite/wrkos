@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WRKOS | Read Archive</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero{
+  position:relative;
+  height:320px;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.65);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      #000 5%,
+      rgba(0,0,0,.3)
+    );
+}
+
+/* =========================
+   TOPBAR
+========================= */
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+
+  padding:18px 20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  z-index:999;
+
+  background:rgba(0,0,0,.45);
+  backdrop-filter:blur(12px);
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  height:30px;
+}
+
+.logo span{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.back-btn{
+  text-decoration:none;
+  color:#fff;
+
+  padding:10px 14px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+
+  font-size:12px;
+}
+
+/* =========================
+   HEADER CONTENT
+========================= */
+.hero-content{
+  position:absolute;
+  left:24px;
+  bottom:24px;
+  right:24px;
+
+  z-index:2;
+}
+
+.hero-content h1{
+  font-size:38px;
+  line-height:1.1;
+  margin-bottom:10px;
+}
+
+.hero-content p{
+  color:#b0b0b0;
+  line-height:1.6;
+  font-size:14px;
+}
+
+/* =========================
+   MAIN
+========================= */
+.main{
+  padding:24px;
+
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* =========================
+   INFO GRID
+========================= */
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.info-box{
+  background:#111;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:14px;
+
+  padding:14px;
+
+  font-size:12px;
+  line-height:1.5;
+
+  color:#d0d0d0;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.content{
+  background:#111;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:18px;
+
+  padding:22px;
+
+  line-height:1.9;
+
+  color:#ddd;
+
+  font-size:15px;
+
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+  margin-top:20px;
+
+  text-align:center;
+
+  color:#666;
+
+  font-size:11px;
+  line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+
+  <a href="index.html" class="back-btn">
+    ← Back
+  </a>
+
+  <div class="logo">
+    <img src="../iaf-logo.png">
+    <span>WRKOS</span>
+  </div>
+
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+  <img id="bg" src="../img/pic/Nami.png">
+
+  <div class="hero-content">
+
+    <h1 id="title">
+      LOADING...
+    </h1>
+
+    <p id="desc">
+      Internal archive document
+    </p>
+
+  </div>
+
+</section>
+
+<!-- MAIN -->
+<section class="main">
+
+  <div class="info-grid" id="info"></div>
+
+  <div class="content" id="content">
+    Loading document...
+  </div>
+
+  <div class="footer">
+    © 2026 IAF Digital Engineering — WRKOS
+  </div>
+
+</section>
+
+<script>
+
+let database = [];
+
+function parseReg(reg){
+
+  const prefix =
+    reg.match(/^[A-Z]+/)?.[0]
+    || "UNKNOWN";
+
+  const digits =
+    reg.replace(/\D/g,"");
+
+  const number =
+    digits.slice(0,3) || "---";
+
+  const raw =
+    digits.slice(-8);
+
+  let date = "--/--/----";
+
+  if(raw.length === 8){
+
+    date =
+      `${raw.slice(0,2)}/` +
+      `${raw.slice(2,4)}/` +
+      `${raw.slice(4,8)}`;
+  }
+
+  return {
+    prefix,
+    number,
+    date
+  };
+}
+
+function bgOf(prefix){
+
+  return {
+
+    DOC:"../img/pic/Deu.png",
+    FDOC:"../img/pic/Felo.png",
+    DLOG:"../img/pic/Fela.png",
+    FIMO:"../img/pic/Vix.png",
+    REP:"../img/pic/Vix.png"
+
+  }[prefix] || "../img/pic/Nami.png";
+}
+
+function labelOf(p){
+
+  return {
+
+    DOC:"DOC",
+    FDOC:"FURRU DOC",
+    DLOG:"LOG",
+    FIMO:"MEMO",
+    REP:"REPORT"
+
+  }[p] || p;
+}
+
+async function load(){
+
+  const params =
+    new URLSearchParams(location.search);
+
+  const id =
+    params.get("id");
+
+  const res =
+    await fetch("data.json");
+
+  database =
+    await res.json();
+
+  const file =
+    database.find(x =>
+      x.reg_id === id
+    );
+
+  if(!file){
+
+    document.getElementById("title")
+    .textContent = "DOCUMENT NOT FOUND";
+
+    return;
+  }
+
+  const info =
+    parseReg(file.reg_id);
+
+  document.getElementById("bg").src =
+    bgOf(info.prefix);
+
+  document.getElementById("title").textContent =
+    file.title;
+
+  document.getElementById("desc").textContent =
+    file.description ||
+    "Internal archive document";
+
+  document.getElementById("info").innerHTML = `
+
+    <div class="info-box">
+      REG-ID<br>
+      ${file.reg_id}
+    </div>
+
+    <div class="info-box">
+      CATEGORY<br>
+      ${labelOf(info.prefix)}
+    </div>
+
+    <div class="info-box">
+      DOCUMENT NO<br>
+      ${info.number}
+    </div>
+
+    <div class="info-box">
+      DATE<br>
+      ${info.date}
+    </div>
+  `;
+
+  document.getElementById("content").innerHTML =
+    (file.content || "No content available")
+    .replace(/\n/g,"<br>");
+}
+
+load();
+
+</script>
+
+</body>
+</html>

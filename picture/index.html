@@ -309,24 +309,61 @@ body{
 }
 
 /* =========================
+   MOBILE PREVIEW
+========================= */
+.mobile-preview{
+  display:none;
+  padding:100px 20px 30px;
+}
+
+.mobile-profile{
+  margin-top:20px;
+}
+
+.mobile-profile h1{
+  font-size:34px;
+}
+
+.mobile-profile p{
+  color:#aaa;
+  margin-top:8px;
+  line-height:1.5;
+}
+
+.mobile-gallery{
+  margin-top:20px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.mobile-gallery img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+
+  border-radius:14px;
+
+  border:1px solid rgba(255,255,255,.08);
+}
+
+/* =========================
    VIEWER
 ========================= */
 .viewer{
-  position:absolute;
-  top:0;
-  right:0;
-  width:calc(100% - 480px);
-  height:100%;
+  position:fixed;
+  inset:0;
 
   display:none;
-  z-index:50;
+  z-index:9999;
 }
 
 .viewer::before{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.65);
+  background:rgba(0,0,0,.8);
   backdrop-filter:blur(10px);
 }
 
@@ -336,7 +373,8 @@ body{
   top:50%;
   transform:translate(-50%,-50%);
 
-  width:80%;
+  width:85%;
+  max-width:1200px;
   max-height:90%;
 
   object-fit:contain;
@@ -359,14 +397,95 @@ body{
     height:auto;
   }
 
+  /* LEFT PANEL */
   .hero-right{
     width:100%;
     height:auto;
-    min-height:100vh;
+    min-height:auto;
+
+    padding:
+      90px 20px 20px;
   }
 
+  /* hide mobile ui on desktop */
+.mobile-preview{
+  display:none;
+}
+
+/* hide desktop ui on mobile */
+.hero{
+  display:none;
+}
+
+/* show mobile ui */
+.mobile-preview{
+  display:block;
+}
+  /* RIGHT PANEL */
   .hero-left{
-    display:none;
+
+    display:block;
+
+    width:100%;
+    min-height:100vh;
+
+    position:relative;
+  }
+
+  /* background */
+  #bg{
+    position:absolute;
+    inset:0;
+    height:100%;
+  }
+
+  /* profile */
+  .profile{
+
+    position:relative;
+
+    left:auto;
+    top:auto;
+    bottom:auto;
+
+    width:100%;
+
+    padding:40px 20px 30px;
+  }
+
+  .profile h1{
+    font-size:38px;
+  }
+
+  .profile p{
+    font-size:14px;
+  }
+
+  /* gallery */
+  .gallery{
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:10px;
+  }
+
+  .gallery img{
+    height:170px;
+    border-radius:12px;
+  }
+
+  /* viewer full */
+  .viewer{
+    width:100%;
+    height:100%;
+    position:fixed;
+    inset:0;
+  }
+
+  .viewer img{
+    width:92%;
+    max-height:85%;
   }
 }
 </style>
@@ -387,6 +506,9 @@ body{
 
 </div>
 
+<!-- =========================
+     DESKTOP
+========================= -->
 <section class="hero">
 
 <!-- LEFT -->
@@ -432,6 +554,52 @@ body{
 
 </section>
 
+<!-- =========================
+     MOBILE
+========================= -->
+<section class="mobile-preview">
+
+  <h2 style="font-size:36px;">
+    Image Gallery
+  </h2>
+
+  <p style="
+    color:#888;
+    margin-top:8px;
+    margin-bottom:18px;
+  ">
+    IAF | Personnel visual archive
+  </p>
+
+  <div class="search">
+    <input
+      id="mobileSearch"
+      placeholder="Search unit..."
+      oninput="filterUnits()"
+    >
+  </div>
+
+  <div class="list" id="mobileList"></div>
+
+  <div
+    class="mobile-profile"
+    id="mobileProfile"
+    style="display:none;"
+  >
+
+    <h1 id="mobileName"></h1>
+
+    <p id="mobileDesc"></p>
+
+    <div
+      class="mobile-gallery"
+      id="mobileGallery"
+    ></div>
+
+  </div>
+
+</section>
+
 <!-- VIEWER -->
 <div
   class="viewer"
@@ -461,24 +629,18 @@ async function load(){
 
 function render(list){
 
-  const el =
+  const desktop =
     document.getElementById("list");
 
-  el.innerHTML = "";
+  const mobile =
+    document.getElementById("mobileList");
+
+  desktop.innerHTML = "";
+  mobile.innerHTML = "";
 
   list.forEach(fp=>{
 
-    const div =
-      document.createElement("div");
-
-    div.className = "unit";
-
-    div.style.setProperty(
-      "--bg",
-      `url(${fp.profile})`
-    );
-
-    div.innerHTML = `
+    const html = `
       <div class="unit-info">
 
         <h3>${fp.name}</h3>
@@ -490,28 +652,57 @@ function render(list){
       </div>
     `;
 
-    div.onclick = ()=>{
+    /* DESKTOP CARD */
+    const d =
+      document.createElement("div");
 
-      if(window.innerWidth < 900){
+    d.className = "unit";
 
-        select(fp);
+    d.style.setProperty(
+      "--bg",
+      `url(${fp.profile})`
+    );
 
-        window.scrollTo({
-          top:9999,
-          behavior:"smooth"
-        });
+    d.innerHTML = html;
 
-        return;
-      }
+    d.onclick = ()=>{
 
-      select(fp);
+      selectDesktop(fp);
     };
 
-    el.appendChild(div);
+    desktop.appendChild(d);
+
+    /* MOBILE CARD */
+    const m =
+      document.createElement("div");
+
+    m.className = "unit";
+
+    m.style.setProperty(
+      "--bg",
+      `url(${fp.profile})`
+    );
+
+    m.innerHTML = html;
+
+    m.onclick = ()=>{
+
+      selectMobile(fp);
+
+      window.scrollTo({
+        top:9999,
+        behavior:"smooth"
+      });
+    };
+
+    mobile.appendChild(m);
   });
 }
 
-function select(fp){
+/* =========================
+   DESKTOP
+========================= */
+function selectDesktop(fp){
 
   document.getElementById("bg").src =
     fp.profile || "";
@@ -528,17 +719,15 @@ function select(fp){
 
   gallery.innerHTML = "";
 
-  /* profile pic */
-  addImage(fp.profile);
+  addDesktopImage(fp.profile);
 
-  /* outfits */
   (fp.outfits || []).forEach(img=>{
 
-    addImage(img);
+    addDesktopImage(img);
   });
 }
 
-function addImage(src){
+function addDesktopImage(src){
 
   const img =
     document.createElement("img");
@@ -547,11 +736,7 @@ function addImage(src){
 
   img.onclick = ()=>{
 
-    document.getElementById("viewerImg").src =
-      src;
-
-    document.getElementById("viewer").style.display =
-      "block";
+    openViewer(src);
   };
 
   document
@@ -559,11 +744,89 @@ function addImage(src){
     .appendChild(img);
 }
 
+/* =========================
+   MOBILE
+========================= */
+function selectMobile(fp){
+
+  document.getElementById(
+    "mobileProfile"
+  ).style.display = "block";
+
+  document.getElementById(
+    "mobileName"
+  ).textContent =
+    fp.name || "UNKNOWN";
+
+  document.getElementById(
+    "mobileDesc"
+  ).textContent =
+    fp.subtitle ||
+    "No description available";
+
+  const gallery =
+    document.getElementById(
+      "mobileGallery"
+    );
+
+  gallery.innerHTML = "";
+
+  addMobileImage(fp.profile);
+
+  (fp.outfits || []).forEach(img=>{
+
+    addMobileImage(img);
+  });
+}
+
+function addMobileImage(src){
+
+  const img =
+    document.createElement("img");
+
+  img.src = src;
+
+  img.onclick = ()=>{
+
+    openViewer(src);
+  };
+
+  document
+    .getElementById("mobileGallery")
+    .appendChild(img);
+}
+
+/* =========================
+   VIEWER
+========================= */
+function openViewer(src){
+
+  document.getElementById(
+    "viewerImg"
+  ).src = src;
+
+  document.getElementById(
+    "viewer"
+  ).style.display = "block";
+}
+
+/* =========================
+   SEARCH
+========================= */
 function filterUnits(){
 
+  const desktop =
+    document.getElementById("search");
+
+  const mobile =
+    document.getElementById("mobileSearch");
+
   const v =
-    document.getElementById("search")
-    .value
+    (
+      desktop?.value ||
+      mobile?.value ||
+      ""
+    )
     .toLowerCase();
 
   render(

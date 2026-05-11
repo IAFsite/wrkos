@@ -474,7 +474,7 @@ function select(fp){
 
   document.getElementById("desc").textContent =
     fp.description ||
-    `${fp.model || "UNKNOWN"} | ${fp.sn || "NO-SN"}`;
+    `${fp.subtitle || "UNKNOWN"}`;
 
   const info =
     document.getElementById("info");
