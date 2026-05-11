@@ -3,10 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>WRKOS</title>
-<link rel="manifest" href="manifest.json">
+
+<link rel="manifest" href="./manifest.json">
 
 <meta name="theme-color" content="#000000">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="apple-touch-icon" href="./icon-192.png">
 <style>
 *{
   box-sizing:border-box;
@@ -213,16 +221,6 @@ body{
 }
 </style>
 </head>
-<script>
-
-if("serviceWorker" in navigator){
-
-  navigator.serviceWorker
-  .register("./sw.js");
-
-}
-
-</script>
 <body>
 
 <div class="topbar">
@@ -286,6 +284,28 @@ if("serviceWorker" in navigator){
   </div>
 
 </section>
+<script>
 
+if("serviceWorker" in navigator){
+
+  window.addEventListener("load", async ()=>{
+
+    try{
+
+      await navigator.serviceWorker.register("./sw.js");
+
+      console.log("WRKOS SW READY");
+
+    }catch(err){
+
+      console.log(err);
+
+    }
+
+  });
+
+}
+
+</script>
 </body>
 </html>
