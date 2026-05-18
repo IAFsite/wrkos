@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IAF Tablet</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+
+/* ===== HERO PHOTO ===== */
+.hero {
+  display: flex;
+  flex-direction: row-reverse; /* foto di kanan */
+  max-width: 1200px;
+  margin: 100px auto 40px auto;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.hero-photo {
+  position: relative;
+  width: 40%;
+  flex-shrink: 0;
+}
+
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  border-radius: 16px;
+  filter: brightness(0.9);
+}
+
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #0f0f12 0%, transparent 30%);
+  border-radius: 16px;
+}
+
+/* ===== APP LIST AREA ===== */
+.app-panel {
+  flex: 1;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: auto;
+}
+
+/* HEADER */
+.panel-header h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.panel-header p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* ===== APP LIST ===== */
+.app-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.app-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.app-item:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateX(5px);
+}
+
+.app-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.app-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.app-info span {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 900px){
+  .hero {
+    flex-direction: column;
+  }
+  .hero-photo {
+    width: 100%;
+    height: 40vh;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+  <!-- HERO PHOTO -->
+  <div class="hero-photo">
+    <img src="" alt="">
+  </div>
+
+  <!-- APP PANEL -->
+  <div class="app-panel">
+
+    <div class="panel-header">
+      <h1 id="unit-name">WRKTAB</h1>
+      <p>Work tablet</p>
+    </div>
+
+    <div class="app-list">
+
+      <div class="app-item">
+        <div class="app-icon">📋</div>
+        <div class="app-info">
+          <h3>Work tools</h3>
+          <span>check system status or other work</span>
+        </div>
+      </div>
+
+      <div class="app-item">
+        <div class="app-icon">📄</div>
+        <div class="app-info">
+          <h3>report tool</h3>
+          <span>tools for creating and sending reports</span>
+        </div>
+      </div>
+    
+      <div class="app-item">
+        <div class="app-icon">📁</div>
+        <div class="app-info">
+          <h3>Files</h3>
+          <span>Access stored documents</span>
+        </div>
+      </div>
+
+      <div class="app-item">
+        <div class="app-icon">🌐</div>
+        <div class="app-info">
+          <h3>internet explorer</h3>
+          <span>matters that require a browser</span>
+        </div>
+      </div>
+
+      <div class="app-item">
+        <div class="app-icon">📸</div>
+        <div class="app-info">
+          <h3>Camera app</h3>
+          <span>take videos and photos</span>
+        </div>
+      </div>
+
+      <div class="app-item">
+        <div class="app-icon">⚙️</div>
+        <div class="app-info">
+          <h3>Settings</h3>
+          <span>System configuration</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+function getUnitID(){
+  const params = new URLSearchParams(window.location.search);
+  return params.get("id") || "FP001";
+}
+
+async function loadFP(){
+  const unitID = getUnitID();
+
+  try {
+    const response = await fetch("data.json");
+
+    if(!response.ok){
+      throw new Error("JSON gagal di-load");
+    }
+
+    const data = await response.json();
+
+    // fallback aman
+    const fp = data?.personnel?.[unitID] || data?.personnel?.["FP001"];
+
+    if(!fp){
+      throw new Error("Data tidak ditemukan");
+    }
+
+    updateUI(fp);
+
+  } catch(err) {
+    console.error("ERROR:", err);
+    document.getElementById("unit-name").textContent = "ERROR";
+  }
+}
+
+function updateUI(fp){
+  const img = document.querySelector(".hero-photo img");
+  const name = document.getElementById("unit-name");
+
+  // === FIX PATH (ini penting 🔥) ===
+  let imgPath = fp.profile || "img/default.png";
+
+  // kalau HTML ada di /pages/, ini biar ga salah folder
+  if(!imgPath.startsWith("http") && !imgPath.startsWith("/")){
+    imgPath = "../" + imgPath;
+  }
+
+  // === APPLY ===
+  img.src = imgPath;
+  img.alt = fp.name || "profile";
+
+  name.textContent = fp.name || fp.sn || "IAF Tablet";
+
+  document.title = `${fp.sn || "Unit"} | IAF Tablet`;
+
+  console.log("Loaded:", fp);
+  console.log("IMG:", imgPath);
+}
+
+loadFP();
+</script>
+
+</body>
+</html>
