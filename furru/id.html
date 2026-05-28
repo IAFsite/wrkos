@@ -3,267 +3,509 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>FP001 | IAF</title>
 
 <style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #000000;
-  color: #fff;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* TOPBAR */
-.topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 999;
-  pointer-events: none;
+body{
+  background:#000;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#fff;
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:30px;
 }
 
-.logo img {
-  height: 36px;
-  opacity: 0.9;
-  pointer-events: auto;
+/* =========================
+   MAIN CARD
+========================= */
+.id-shell{
+
+  width:min(1500px, 100%);
+
+  aspect-ratio:3/2;
+
+  background:#000;
+
+  border-radius:32px;
+
+  overflow:hidden;
+
+  position:relative;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+    0 0 80px rgba(0,0,0,.6);
+
+  display:flex;
 }
 
-.back-btn {
-  pointer-events: auto;
-  text-decoration: none;
-  color: #fff;
-  background: rgba(20,20,27,0.6);
-  backdrop-filter: blur(6px);
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-size: 14px;
-  transition: 0.2s;
+/* =========================
+   LEFT PANEL
+========================= */
+.hero-info{
+
+  width:560px;
+  height:100%;
+
+  background:#000;
+
+  border-right:
+    1px solid rgba(255,255,255,.10);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  padding:50px 36px 30px;
+
+  position:relative;
+  z-index:2;
+
+  overflow:hidden;
 }
 
-.back-btn:hover {
-  background: rgba(255,255,255,0.1);
+/* subtle scanline */
+.hero-info::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,.014) 0px,
+      rgba(255,255,255,.014) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+
+  opacity:.2;
+  pointer-events:none;
 }
 
-/* HERO SIDE-BY-SIDE */
-.hero {
-  display: flex;
-  flex-direction: row-reverse; /* foto di kanan */
-  max-width: 1200px;
-  margin: 100px auto 40px auto;
-  gap: 40px;
-  align-items: flex-start;
-  padding: 0 20px;
+/* =========================
+   HEADER
+========================= */
+.header-top{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
 }
 
-.hero-photo {
-  position: relative;
-  width: 40%;
-  flex-shrink: 0;
+.unit-label{
+  font-size:11px;
+  letter-spacing:2px;
+  color:#666;
 }
 
-.hero-photo img {
-  width: 100%;
-  aspect-ratio: 9/16;
-  object-fit: cover;
-  border-radius: 16px;
-  filter: brightness(0.9);
+.hero-info h1{
+  font-size:74px;
+  line-height:.88;
+  letter-spacing:-5px;
 }
 
-.hero-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, #0f0f12 0%, transparent 30%);
-  border-radius: 16px;
+.subtitle{
+  font-size:15px;
+  color:#8a8a8a;
+  line-height:1.5;
+}
+
+/* =========================
+   INFO CARD
+========================= */
+.hero-card{
+
+  margin-top:36px;
+
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.field{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:16px 18px;
+
+  min-height:68px;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.03)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  transition:.22s;
+}
+
+.field:hover{
+
+  transform:translateX(6px);
+
+  border-color:
+    rgba(255,255,255,.18);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.08),
+      rgba(255,255,255,.04)
+    );
+}
+
+.field strong{
+
+  font-size:12px;
+
+  letter-spacing:1px;
+
+  color:#ffffff;
+
+  font-weight:600;
+}
+
+.field span{
+
+  font-size:14px;
+
+  color:#fff;
+
+  text-align:right;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+
+  margin-top:24px;
+
+  padding-top:20px;
+
+  border-top:
+    1px solid rgba(255,255,255,.06);
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.footer-left strong{
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+.footer-left span{
+  font-size:11px;
+  color:#666;
+}
+
+.status-dot{
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  box-shadow:
+    0 0 12px rgba(255,255,255,.8);
+}
+
+/* =========================
+   RIGHT IMAGE
+========================= */
+.hero-photo{
+
+  flex:1;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:#000;
+}
+
+.hero-photo img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  object-position:center;
+
+  filter:
+    brightness(.95)
+    contrast(1.04);
 }
 
 
-/* HERO INFO */
-.hero-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* biar teks mulai dari atas */
-  gap: 16px;
-  padding-left: 20px;
-  margin-top: 80px; /* ini buat turun, ubah angkanya sesuai kebutuhan */
-}
 
-.hero-info h1 {
-  font-size: 80px; /* nama lebih besar */
-  margin: 0;
-  margin-left: 11px;
-}
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:900px){
 
-.hero-info p.subtitle {
-  font-size: 28px;
-  color: #aaa;
-  margin: 0;
-  margin-left: 13px;
-}
-
-/* CARD UNTUK SEMUA INFO */
-.hero-card {
-  background: rgba(20,20,27,0.8);
-  padding: 20px;
-  border-radius: 16px;
-  color: #bbb;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.hero-card .field {
-  display: flex;
-  justify-content: space-between;
-}
-
-.hero-card .field strong {
-  color: #fff;
-}
-
-/* DESKRIPSI DI ATAS CARD */
-.hero-description {
-  background: rgba(20,20,27,0.6);
-  padding: 16px;
-  border-radius: 16px;
-  color: #bbb;
-  line-height: 1.6;
-  white-space: pre-line;
-}
-
-/* RESPONSIVE */
-@media(max-width: 900px){
-  .hero {
-    flex-direction: column;
-    margin-top: 120px;
+  body{
+    padding:0;
   }
-  .hero-photo {
-    width: 100%;
+
+  .id-shell{
+
+    width:100%;
+    height:100vh;
+
+    aspect-ratio:auto;
+
+    border-radius:0;
   }
-  .hero-photo::after {
-    background: linear-gradient(to top, #0f0f12 0%, transparent 30%);
+
+  .hero-photo{
+    position:absolute;
+    inset:0;
   }
-  .hero-info h1 { font-size: 36px; }
-  .hero-info p.subtitle { font-size: 16px; }
+
+  .hero-info{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    background:
+      rgba(0,0,0,.72);
+
+    backdrop-filter:blur(14px);
+
+    border:none;
+  }
+
+  .hero-info h1{
+    font-size:54px;
+  }
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO SIDE-BY-SIDE -->
-<section class="hero">
+<div class="id-shell">
+
+  <!-- LEFT INFO -->
+  <div class="hero-info">
+
+    <div>
+
+      <div class="header-top">
+
+        <div class="unit-label">
+          IAF PERSONNEL FILE
+        </div>
+
+        <h1 id="unit-name">
+          FP001
+        </h1>
+
+        <p class="subtitle" id="subtitle">
+          UNIT INFORMATION
+        </p>
+
+      </div>
+
+      <div class="hero-card" id="info-card">
+      </div>
+
+    </div>
+
+    <div class="footer">
+
+      <div class="footer-left">
+        <strong>PERSONNEL ONLINE</strong>
+        <span>IAF Digital Engineering</span>
+      </div>
+
+      <div class="status-dot"></div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
   <div class="hero-photo">
     <img src="" alt="">
   </div>
-  <div class="hero-info">
-    <h1></h1>
-    <p class="subtitle"></p>
-    <div class="hero-description" id="overview"></div>
-    <div class="hero-card" id="info-card">
-      <!-- info fields bakal di JS masukin sini -->
-    </div>
-  </div>
-</section>
+
+</div>
 
 <script>
-function generateDescription(fp){
-
-  const unitNumber = parseInt(fp.sn.replace("FP","")) || "?";
-
-  let affiliation = "";
-  if(fp.subtitle){
-    const parts = fp.subtitle.split("|");
-    affiliation = parts[2]?.trim() || "NONE";
-  }
-
-  return `${fp.name} adalah Furru ke-${unitNumber} dengan SN ${fp.sn} dan REG-ID ${fp.reg}
-
-${fp.name.toLowerCase()} adalah ${fp.sex.toLowerCase()} ${fp.model} dengan tinggi badan ${fp.height_no_ears} cm tanpa kuping dan ${fp.height_with_ears} cm dengan kuping 
-
-${fp.name} sudah aktif sejak ${fp.deploy} selain itu ${fp.name.toLowerCase()} juga terafiliasi dengan ${affiliation}`;
-}
 function getUnitID(){
-  const params = new URLSearchParams(window.location.search);
+
+  const params =
+    new URLSearchParams(window.location.search);
+
   return params.get("id") || "FP001";
 }
 
 async function loadFP(){
+
   const unitID = getUnitID();
 
-  try {
-    const response = await fetch("data.json");
-    if(!response.ok) throw new Error("Fetch gagal");
+  try{
 
-    const data = await response.json();
+    const response =
+      await fetch("data.json");
 
-    // fallback aman
-    const fp = data?.personnel?.[unitID] || data?.personnel?.["FP001"];
+    if(!response.ok){
+      throw new Error("Fetch gagal");
+    }
 
-    if(!fp) throw new Error("Data kosong");
+    const data =
+      await response.json();
+
+    const fp =
+      data?.personnel?.[unitID]
+      || data?.personnel?.["FP001"];
+
+    if(!fp){
+      throw new Error("Data kosong");
+    }
 
     updateHero(fp);
 
-  } catch(err) {
-    console.error("Load error:", err);
+  }catch(err){
 
-    document.querySelector(".hero-info h1").textContent = "ERROR";
+    console.error(err);
+
+    document.getElementById(
+      "unit-name"
+    ).textContent = "ERROR";
   }
 }
 
 function updateHero(fp){
-  const heroImg = document.querySelector(".hero-photo img");
-  const heroTitle = document.querySelector(".hero-info h1");
-  const heroSub = document.querySelector(".hero-info .subtitle");
-  const overview = document.getElementById("overview");
-  const infoCard = document.getElementById("info-card");
 
-  // === BASIC ===
-  heroImg.src = "../" + (fp.profile || "img/default.png");
+  const heroImg =
+    document.querySelector(".hero-photo img");
+
+  const heroTitle =
+    document.getElementById("unit-name");
+
+  const heroSub =
+    document.getElementById("subtitle");
+
+  const infoCard =
+    document.getElementById("info-card");
+
+  let imgPath =
+    fp.profile || "img/default.png";
+
+  if(
+    !imgPath.startsWith("http")
+    &&
+    !imgPath.startsWith("/")
+  ){
+    imgPath = "../" + imgPath;
+  }
+
+  heroImg.src = imgPath;
   heroImg.alt = fp.name || "profile";
 
-  heroTitle.textContent = fp.name || fp.sn || "Unknown";
-  heroSub.textContent = fp.subtitle || `${fp.sn} | ${fp.reg}`;
+  heroTitle.textContent =
+    fp.name
+    || fp.sn
+    || "UNKNOWN";
 
-  overview.textContent = generateDescription(fp);
+  heroSub.textContent =
+    fp.subtitle
+    || `${fp.sn} | ${fp.reg}`;
 
-  // === CARD DATA ===
   const fields = [
+
     ["Serial Number", fp.sn],
+
     ["REG-ID", fp.reg],
+
     ["Base Model", fp.model],
+
     ["Sex", fp.sex],
-    ["Height", fp.height_no_ears ? fp.height_no_ears + " cm" : null],
-    ["Height w/ Ears", fp.height_with_ears ? fp.height_with_ears + " cm" : null],
+
+    [
+      "Height",
+      fp.height_no_ears
+      ? fp.height_no_ears + " cm"
+      : null
+    ],
+
+    [
+      "Height w/ Ears",
+      fp.height_with_ears
+      ? fp.height_with_ears + " cm"
+      : null
+    ],
+
     ["Deployment", fp.deploy]
+
   ];
 
   infoCard.innerHTML = "";
 
   fields.forEach(([label, value])=>{
+
     if(!value) return;
 
-    const div = document.createElement("div");
+    const div =
+      document.createElement("div");
+
     div.className = "field";
-    div.innerHTML = `<strong>${label}</strong><span>${value}</span>`;
+
+    div.innerHTML = `
+      <strong>${label}</strong>
+      <span>${value}</span>
+    `;
+
     infoCard.appendChild(div);
+
   });
 
-  // === TITLE TAB ===
-  document.title = `${fp.sn || "Unit"} | IAF`;
+  document.title =
+    `${fp.sn || "Unit"} | IAF`;
 
   console.log("Loaded:", fp);
 }
 
 loadFP();
 </script>
+
 </body>
 </html>

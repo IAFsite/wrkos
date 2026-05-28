@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FP001 | IAF</title>
+
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000000;
+  color: #fff;
+}
+
+/* TOPBAR */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.logo img {
+  height: 36px;
+  opacity: 0.9;
+  pointer-events: auto;
+}
+
+.back-btn {
+  pointer-events: auto;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(20,20,27,0.6);
+  backdrop-filter: blur(6px);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* HERO SIDE-BY-SIDE */
+.hero {
+  display: flex;
+  flex-direction: row-reverse; /* foto di kanan */
+  max-width: 1200px;
+  margin: 100px auto 40px auto;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.hero-photo {
+  position: relative;
+  width: 40%;
+  flex-shrink: 0;
+}
+
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  border-radius: 16px;
+  filter: brightness(0.9);
+}
+
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #0f0f12 0%, transparent 30%);
+  border-radius: 16px;
+}
+
+
+/* HERO INFO */
+.hero-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* biar teks mulai dari atas */
+  gap: 16px;
+  padding-left: 20px;
+  margin-top: 80px; /* ini buat turun, ubah angkanya sesuai kebutuhan */
+}
+
+.hero-info h1 {
+  font-size: 80px; /* nama lebih besar */
+  margin: 0;
+  margin-left: 11px;
+}
+
+.hero-info p.subtitle {
+  font-size: 28px;
+  color: #aaa;
+  margin: 0;
+  margin-left: 13px;
+}
+
+/* CARD UNTUK SEMUA INFO */
+.hero-card {
+  background: rgba(20,20,27,0.8);
+  padding: 20px;
+  border-radius: 16px;
+  color: #bbb;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-card .field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-card .field strong {
+  color: #fff;
+}
+
+/* DESKRIPSI DI ATAS CARD */
+.hero-description {
+  background: rgba(20,20,27,0.6);
+  padding: 16px;
+  border-radius: 16px;
+  color: #bbb;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+  .hero {
+    flex-direction: column;
+    margin-top: 120px;
+  }
+  .hero-photo {
+    width: 100%;
+  }
+  .hero-photo::after {
+    background: linear-gradient(to top, #0f0f12 0%, transparent 30%);
+  }
+  .hero-info h1 { font-size: 36px; }
+  .hero-info p.subtitle { font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO SIDE-BY-SIDE -->
+<section class="hero">
+  <div class="hero-photo">
+    <img src="" alt="">
+  </div>
+  <div class="hero-info">
+    <h1></h1>
+    <p class="subtitle"></p>
+    <div class="hero-description" id="overview"></div>
+    <div class="hero-card" id="info-card">
+      <!-- info fields bakal di JS masukin sini -->
+    </div>
+  </div>
+</section>
+
+<script>
+function generateDescription(fp){
+
+  const unitNumber = parseInt(fp.sn.replace("FP","")) || "?";
+
+  let affiliation = "";
+  if(fp.subtitle){
+    const parts = fp.subtitle.split("|");
+    affiliation = parts[2]?.trim() || "NONE";
+  }
+
+  return `${fp.name} adalah Furru ke-${unitNumber} dengan SN ${fp.sn} dan REG-ID ${fp.reg}
+
+${fp.name.toLowerCase()} adalah ${fp.sex.toLowerCase()} ${fp.model} dengan tinggi badan ${fp.height_no_ears} cm tanpa kuping dan ${fp.height_with_ears} cm dengan kuping 
+
+${fp.name} sudah aktif sejak ${fp.deploy} selain itu ${fp.name.toLowerCase()} juga terafiliasi dengan ${affiliation}`;
+}
+function getUnitID(){
+  const params = new URLSearchParams(window.location.search);
+  return params.get("id") || "FP001";
+}
+
+async function loadFP(){
+  const unitID = getUnitID();
+
+  try {
+    const response = await fetch("data.json");
+    if(!response.ok) throw new Error("Fetch gagal");
+
+    const data = await response.json();
+
+    // fallback aman
+    const fp = data?.personnel?.[unitID] || data?.personnel?.["FP001"];
+
+    if(!fp) throw new Error("Data kosong");
+
+    updateHero(fp);
+
+  } catch(err) {
+    console.error("Load error:", err);
+
+    document.querySelector(".hero-info h1").textContent = "ERROR";
+  }
+}
+
+function updateHero(fp){
+  const heroImg = document.querySelector(".hero-photo img");
+  const heroTitle = document.querySelector(".hero-info h1");
+  const heroSub = document.querySelector(".hero-info .subtitle");
+  const overview = document.getElementById("overview");
+  const infoCard = document.getElementById("info-card");
+
+  // === BASIC ===
+  heroImg.src = "../" + (fp.profile || "img/default.png");
+  heroImg.alt = fp.name || "profile";
+
+  heroTitle.textContent = fp.name || fp.sn || "Unknown";
+  heroSub.textContent = fp.subtitle || `${fp.sn} | ${fp.reg}`;
+
+  overview.textContent = generateDescription(fp);
+
+  // === CARD DATA ===
+  const fields = [
+    ["Serial Number", fp.sn],
+    ["REG-ID", fp.reg],
+    ["Base Model", fp.model],
+    ["Sex", fp.sex],
+    ["Height", fp.height_no_ears ? fp.height_no_ears + " cm" : null],
+    ["Height w/ Ears", fp.height_with_ears ? fp.height_with_ears + " cm" : null],
+    ["Deployment", fp.deploy]
+  ];
+
+  infoCard.innerHTML = "";
+
+  fields.forEach(([label, value])=>{
+    if(!value) return;
+
+    const div = document.createElement("div");
+    div.className = "field";
+    div.innerHTML = `<strong>${label}</strong><span>${value}</span>`;
+    infoCard.appendChild(div);
+  });
+
+  // === TITLE TAB ===
+  document.title = `${fp.sn || "Unit"} | IAF`;
+
+  console.log("Loaded:", fp);
+}
+
+loadFP();
+</script>
+</body>
+</html>
