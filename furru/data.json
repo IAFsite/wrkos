@@ -171,20 +171,6 @@
       "outfits": [
         "../img/outfit/meg/1.png"
       ]
-    },
-    "FP010": {
-      "name": "Meg",
-      "sn": "FP0010",
-      "reg": "FP01018052026F",
-      "sex": "Female",
-      "deploy": "18/05/2026",
-      "height_no_ears": 190,
-      "height_with_ears": 205,
-      "model": "Megpie Rexouium",
-      "profile": "../img/pic/Meg.png",
-      "subtitle": "FP010 | FP01018052026F | Lead SMC",
-      "role": "Lead MSC",
-      "outfits": [
-        "../img/outfit/meg/1.png"
+    }
   }
 }
