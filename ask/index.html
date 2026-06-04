@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>WRKASK</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#000;
+color:#fff;
+overflow:hidden;
+height:100vh;
+}
+
+.topbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 30px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+z-index:999;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:34px;
+}
+
+.logo span{
+font-size:14px;
+font-weight:700;
+letter-spacing:2px;
+}
+
+.back-btn{
+text-decoration:none;
+color:#fff;
+
+background:rgba(20,20,20,.6);
+
+backdrop-filter:blur(10px);
+
+padding:10px 16px;
+border-radius:999px;
+font-size:13px;
+}
+
+.hero{
+display:flex;
+height:100vh;
+}
+
+/* SIDEBAR */
+
+.hero-right{
+
+width:380px;
+
+padding:90px 25px 20px;
+
+background:#050505;
+
+border-right:
+1px solid rgba(255,255,255,.08);
+
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.hero-right h2{
+font-size:40px;
+}
+
+.hero-right p{
+font-size:13px;
+color:#888;
+}
+
+.reason-box{
+
+background:
+rgba(255,255,255,.03);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+border-radius:14px;
+
+padding:15px;
+}
+
+.reason-box h3{
+margin-bottom:10px;
+}
+
+#reason{
+
+font-size:12px;
+color:#aaa;
+
+white-space:pre-wrap;
+
+max-height:300px;
+overflow:auto;
+}
+
+.examples{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.example{
+
+padding:12px;
+
+border-radius:12px;
+
+cursor:pointer;
+
+background:
+rgba(255,255,255,.04);
+
+border:
+1px solid rgba(255,255,255,.08);
+}
+
+.example:hover{
+
+background:
+rgba(255,255,255,.08);
+
+}
+
+/* CHAT */
+
+.hero-left{
+flex:1;
+position:relative;
+overflow:hidden;
+}
+
+/* WALLPAPER */
+
+.hero-left::before{
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background:
+url("../img/pic/Nami.png")
+center/cover;
+
+filter:
+blur(10px)
+brightness(.25);
+
+transform:
+scale(1.05);
+
+}
+
+.messages{
+
+position:absolute;
+
+top:80px;
+left:0;
+right:0;
+bottom:90px;
+
+overflow:auto;
+
+padding:20px 40px;
+
+display:flex;
+flex-direction:column;
+gap:12px;
+
+}
+
+.msg{
+
+max-width:750px;
+
+padding:16px;
+
+border-radius:16px;
+
+backdrop-filter:
+blur(18px);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+white-space:pre-wrap;
+
+z-index:2;
+}
+
+.bot{
+
+align-self:flex-start;
+
+background:
+rgba(0,0,0,.45);
+
+}
+
+.user{
+
+align-self:flex-end;
+
+background:
+rgba(255,255,255,.08);
+
+}
+
+.msg img{
+
+width:100%;
+max-width:420px;
+
+margin-top:12px;
+
+border-radius:12px;
+}
+
+.inputbar{
+
+position:absolute;
+
+left:0;
+right:0;
+bottom:0;
+
+padding:15px;
+
+display:flex;
+gap:10px;
+
+backdrop-filter:
+blur(20px);
+
+background:
+rgba(0,0,0,.35);
+
+}
+
+.inputbar input{
+
+flex:1;
+
+padding:14px;
+
+border:none;
+outline:none;
+
+border-radius:12px;
+
+background:
+rgba(255,255,255,.08);
+
+color:white;
+}
+
+.inputbar button{
+
+padding:14px 20px;
+
+border:none;
+
+border-radius:12px;
+
+cursor:pointer;
+
+background:white;
+color:black;
+}
+
+.footer{
+
+margin-top:auto;
+
+font-size:11px;
+color:#666;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-right{
+display:none;
+}
+
+.messages{
+padding:15px;
+}
+
+.msg{
+max-width:90%;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+
+<a
+href="../index.html"
+class="back-btn"
+>
+← Back
+</a>
+
+<div class="logo">
+
+<img src="../iaf-logo.png">
+
+<span>WRKOS</span>
+
+</div>
+
+</div>
+
+<section class="hero">
+
+<!-- SIDEBAR -->
+
+<div class="hero-right">
+
+<h2>WRKASK</h2>
+
+<p>
+IAF Knowledge System
+</p>
+
+<div class="reason-box">
+
+<h3>Reasoning</h3>
+
+<div id="reason">
+
+Waiting...
+
+</div>
+
+</div>
+
+<div class="examples">
+
+<div
+class="example"
+onclick="quick('siapa deu')"
+>
+siapa deu
+</div>
+
+<div
+class="example"
+onclick="quick('kasih liat foto deu')"
+>
+kasih liat foto deu
+</div>
+
+<div
+class="example"
+onclick="quick('anggota ict')"
+>
+anggota ict
+</div>
+
+<div
+class="example"
+onclick="quick('dokumen iaf')"
+>
+dokumen iaf
+</div>
+
+</div>
+
+<div class="footer">
+
+© 2026 IAF Digital Engineering
+
+</div>
+
+</div>
+
+<!-- CHAT -->
+
+<div class="hero-left">
+
+<div
+id="messages"
+class="messages"
+>
+
+<div class="msg bot">
+
+WRKASK online.
+
+</div>
+
+</div>
+
+<div class="inputbar">
+
+<input
+id="input"
+placeholder="Ask WRKASK..."
+>
+
+<button onclick="send()">
+
+Ask
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="nlp.js"></script>
+
+<script>
+
+const messages =
+document.getElementById(
+"messages"
+);
+
+function addUser(text){
+
+const div =
+document.createElement("div");
+
+div.className =
+"msg user";
+
+div.textContent =
+text;
+
+messages.appendChild(div);
+
+scrollBottom();
+
+}
+
+function addBot(res){
+
+const div =
+document.createElement("div");
+
+div.className =
+"msg bot";
+
+div.innerHTML =
+res.text || "";
+
+if(res.image){
+
+const img =
+document.createElement("img");
+
+img.src =
+res.image;
+
+div.appendChild(img);
+
+}
+
+if(res.gallery){
+
+res.gallery
+.forEach(src=>{
+
+const img =
+document.createElement("img");
+
+img.src =
+src;
+
+div.appendChild(img);
+
+});
+
+}
+
+messages.appendChild(div);
+
+scrollBottom();
+
+}
+
+function scrollBottom(){
+
+messages.scrollTop =
+messages.scrollHeight;
+
+}
+
+function send(){
+
+const input =
+document.getElementById(
+"input"
+);
+
+const text =
+input.value.trim();
+
+if(!text) return;
+
+addUser(text);
+
+const res =
+NLP.ask(text);
+
+addBot(res);
+
+document
+.getElementById("reason")
+.textContent =
+JSON.stringify(
+res,
+null,
+2
+);
+
+input.value="";
+
+}
+
+function quick(text){
+
+document
+.getElementById("input")
+.value=text;
+
+send();
+
+}
+
+document
+.getElementById("input")
+.addEventListener(
+"keydown",
+e=>{
+
+if(
+e.key==="Enter"
+){
+
+send();
+
+}
+
+}
+);
+
+window.onload =
+async()=>{
+
+await NLP.load();
+
+};
+
+</script>
+
+</body>
+</html>
