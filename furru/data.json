@@ -10,7 +10,6 @@
       "height_with_ears": 203,
       "model": "Deuzear",
       "profile": "../img/pic/Deu.png",
-      "subtitle": "FP001 | FP00111082025M | lead ICT",
       "role": "ICT",
       "outfits": [
         "../img/outfit/deu/1.png",
@@ -28,7 +27,6 @@
       "height_with_ears": 220,
       "model": "Alphazear",
       "profile": "../img/pic/Alpha.png",
-      "subtitle": "FP002 | FP00227102025M | EBS security enforcement",
       "role": "EBS",
       "outfits": [
         "../img/outfit/alpha/1.png",
@@ -45,8 +43,7 @@
       "height_with_ears": 130,
       "model": "Chibigen",
       "profile": "../img/pic/Cebol.png",
-      "subtitle": "FP003 | FP00307112025U | none",
-      "role": "none",
+      "role": "EBS",
       "outfits": [
         "../img/outfit/cebol/1.png"
       ]
@@ -61,7 +58,6 @@
       "height_with_ears": 183,
       "model": "Winterpal Feline",
       "profile": "../img/pic/Felo.png",
-      "subtitle": "FP004 | FP00413112025M | ICT",
       "role": "ICT",
       "outfits": [
         "../img/outfit/felo/1.png",
@@ -80,7 +76,6 @@
       "height_with_ears": 183,
       "model": "Winterpal Feline",
       "profile": "../img/pic/Fela.png",
-      "subtitle": "FP005 | FP00513112025F | ICT",
       "role": "ICT",
       "outfits": [
         "../img/outfit/fela/1.png",
@@ -99,7 +94,6 @@
       "height_with_ears": 203,
       "model": "Novabeast",
       "profile": "../img/pic/Nova.png",
-      "subtitle": "FP006 | FP00611122025F | lead EBS",
       "role": "EBS",
       "outfits": [
         "../img/outfit/nova/1.png",
@@ -116,7 +110,6 @@
       "height_with_ears": 193,
       "model": "Nova Pup",
       "profile": "../img/pic/Nop.png",
-      "subtitle": "FP007 | FP00714122025F | EBS",
       "role": "EBS",
       "outfits": [
         "../img/outfit/nop/1.png",
@@ -133,7 +126,6 @@
       "height_with_ears": 130,
       "model": "Nanami",
       "profile": "../img/pic/Nami.png",
-      "subtitle": "FP008 | FP00814042026F | EBS",
       "role": "EBS",
       "outfits": [
         "../img/outfit/nami/1.png",
@@ -150,7 +142,6 @@
       "height_with_ears": 185,
       "model": "Vixine",
       "profile": "../img/pic/Vix.png",
-      "subtitle": "FP009 | FP00918042026F | ICT",
       "role": "EBS",
       "outfits": [
         "../img/outfit/vix/1.png"
@@ -166,7 +157,6 @@
       "height_with_ears": 205,
       "model": "Megpie Rexouium",
       "profile": "../img/pic/Meg.png",
-      "subtitle": "FP010 | FP01018052026F | Lead SMC",
       "role": "Lead MSC",
       "outfits": [
         "../img/outfit/meg/1.png"

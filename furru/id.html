@@ -447,7 +447,7 @@ function updateHero(fp){
     || "UNKNOWN";
 
   heroSub.textContent =
-    fp.subtitle
+    fp.sn + " | " + fp.reg + " | " + fp.role
     || `${fp.sn} | ${fp.reg}`;
 
   const fields = [

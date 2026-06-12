@@ -711,7 +711,7 @@ function selectDesktop(fp){
     fp.name || "UNKNOWN";
 
   document.getElementById("desc").textContent =
-    fp.subtitle ||
+    fp.sn + " | " + fp.reg + " | " + fp.role
     "No description available";
 
   const gallery =
@@ -761,7 +761,7 @@ function selectMobile(fp){
   document.getElementById(
     "mobileDesc"
   ).textContent =
-    fp.subtitle ||
+    fp.sn + " | " + fp.reg + " | " + fp.role
     "No description available";
 
   const gallery =
