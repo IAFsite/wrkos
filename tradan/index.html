@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TRADAN</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial;background:#000;color:#fff;overflow:hidden}
+.hero{height:100vh;display:flex}
+
+.left{
+width:420px;
+padding:90px 35px 25px;
+background:#050505;
+border-right:1px solid rgba(255,255,255,.08);
+display:flex;
+flex-direction:column;
+gap:20px
+}
+
+.box{
+padding:18px;
+border-radius:18px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08)
+}
+
+.right{
+flex:1;
+position:relative;
+overflow:hidden
+}
+
+#wallpaper{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(.5) grayscale(100%)
+}
+
+.back{
+position:absolute;
+top:25px;
+left:25px;
+z-index:20;
+text-decoration:none;
+color:#fff;
+padding:10px 18px;
+border-radius:999px;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(12px)
+}
+
+.wishlist{
+position:absolute;
+top:90px;
+left:40px;
+width:650px;
+padding:18px;
+border-radius:24px;
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+z-index:10;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.item{
+cursor:pointer;
+overflow:hidden;
+border-radius:16px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.item img{
+width:100%;
+height:110px;
+object-fit:cover;
+}
+
+.info{
+padding:10px;
+font-size:13px;
+}
+
+.overlay{
+position:absolute;
+left:50px;
+bottom:50px;
+z-index:10;
+}
+
+.overlay h1{
+font-size:64px;
+margin-bottom:10px;
+}
+
+#idr{
+font-size:42px;
+font-weight:bold;
+margin-top:8px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+background:#111;
+color:white;
+border:none;
+border-radius:12px;
+}
+
+#history{
+margin-top:10px;
+font-size:13px;
+color:#aaa;
+display:flex;
+flex-direction:column;
+gap:6px;
+max-height:180px;
+overflow:auto;
+}
+</style>
+</head>
+<body>
+
+<a href="../index.html" class="back">← Back</a>
+
+<div class="hero">
+
+<div class="left">
+
+<div>
+<h1>TRADAN</h1>
+<div style="color:#888">IAF Asset Monitor</div>
+</div>
+
+<div class="box">
+<div style="color:#888">USD → IDR</div>
+<div id="rate" style="font-size:32px;font-weight:bold">...</div>
+<div id="updated" style="font-size:12px;color:#666"></div>
+</div>
+
+<div class="box">
+<div style="color:#888">Converter</div>
+
+<input
+id="usdInput"
+type="number"
+placeholder="USD">
+
+<div
+id="result"
+style="
+margin-top:12px;
+font-size:26px;
+font-weight:bold">
+Rp 0
+</div>
+</div>
+
+<div class="box">
+<div style="color:#888">Last Minute Log</div>
+<div id="history"></div>
+</div>
+
+</div>
+
+<div class="right">
+
+<img id="wallpaper" src="">
+
+<div class="wishlist">
+<div class="grid" id="grid"></div>
+</div>
+
+<div class="overlay">
+<div style="color:#999;margin-bottom:10px">
+ASSET PRICE MONITOR
+</div>
+
+<h1 id="name">Loading...</h1>
+
+<div id="usd">$0</div>
+
+<div id="idr">Rp 0</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+let rate=0;
+let assets=[];
+let selected=0;
+let logs=[];
+
+async function loadAssets(){
+
+ const res=await fetch("data.json");
+ assets=await res.json();
+
+ buildGrid();
+ render();
+}
+
+function buildGrid(){
+
+ grid.innerHTML="";
+
+ assets.slice(0,4).forEach((a,i)=>{
+
+  const idr=Math.round(a.usd*rate);
+
+  grid.innerHTML+=`
+  <div class="item" onclick="selectAsset(${i})">
+   <img src="${a.image}">
+   <div class="info">
+    <b>${a.name}</b><br>
+    $${a.usd}<br>
+    Rp ${idr.toLocaleString("id-ID")}
+   </div>
+  </div>`;
+ });
+}
+
+function selectAsset(i){
+ selected=i;
+ render();
+}
+
+function render(){
+
+ if(!assets.length)return;
+
+ const a=assets[selected];
+
+ wallpaper.src=a.image;
+ name.innerText=a.name;
+ usd.innerText="$"+a.usd;
+
+ idr.innerText=
+ "Rp "+
+ Math.round(a.usd*rate)
+ .toLocaleString("id-ID");
+
+ buildGrid();
+}
+
+async function updateRate(){
+
+ try{
+
+  const r=
+  await fetch(
+  "https://open.er-api.com/v6/latest/USD");
+
+  const d=
+  await r.json();
+
+  rate=d.rates.IDR;
+
+  document.getElementById("rate")
+  .innerText=
+  rate.toLocaleString("id-ID");
+
+  updated.innerText=
+  new Date().toLocaleTimeString();
+
+  render();
+
+ }catch(e){
+  console.log(e);
+ }
+}
+
+usdInput.oninput=()=>{
+
+ const usdVal=
+ Number(usdInput.value||0);
+
+ const idrVal=
+ usdVal*rate;
+
+ result.innerText=
+ "Rp "+
+ Math.round(idrVal)
+ .toLocaleString("id-ID");
+
+ logs.unshift({
+  text:
+  `${usdVal} USD → Rp ${
+  Math.round(idrVal)
+  .toLocaleString("id-ID")
+  }`,
+  time:Date.now()
+ });
+
+ refreshLogs();
+};
+
+function refreshLogs(){
+
+ const now=Date.now();
+
+ logs=
+ logs.filter(
+ x=>now-x.time<60000
+ );
+
+ history.innerHTML=
+ logs.map(
+ x=>`<div>${x.text}</div>`
+ ).join("");
+}
+
+setInterval(refreshLogs,1000);
+setInterval(updateRate,60000);
+
+loadAssets();
+updateRate();
+</script>
+
+</body>
+</html>

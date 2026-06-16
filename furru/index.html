@@ -474,7 +474,7 @@ function select(fp){
 
   document.getElementById("desc").textContent =
     fp.description ||
-    `${fp.subtitle || "UNKNOWN"}`;
+    `${fp.sn + " | " + fp.reg + " | " + fp.role}`;
 
   const info =
     document.getElementById("info");

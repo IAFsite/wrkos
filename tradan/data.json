@@ -1,0 +1,17 @@
+[
+  {
+    "name":"RTX 5070 Ti",
+    "usd":799,
+    "image":"img/5070ti.jpg"
+  },
+  {
+    "name":"ESP32 Dev Board",
+    "usd":4.5,
+    "image":"img/esp32.jpg"
+  },
+  {
+    "name":"Dell Optiplex",
+    "usd":85,
+    "image":"img/optiplex.jpg"
+  }
+]
