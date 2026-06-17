@@ -177,23 +177,23 @@
         "../img/outfit/meg/1.png"
       ]
     },
-        "FP012": {
-      "name": "Kero",
+    "FP012": {
+      "name": "Stero",
       "sn": "FP012",
       "reg": "FP01217062026M",
       "sex": "Male",
       "deploy": "17/06/2026",
       "height_no_ears": 190,
       "height_with_ears": 195,
-      "model": "disko rex broker",
+      "model": "disko rex Meowster",
       "profile": "../img/pic/Stero.png",
       "role": "SMC",
       "outfits": [
         "../img/outfit/meg/1.png"
       ]
     },
-        "FP013": {
-      "name": "Kero",
+    "FP013": {
+      "name": "Pero",
       "sn": "FP013",
       "reg": "FP01317062026M",
       "sex": "Male",
