@@ -94,7 +94,7 @@
       "height_with_ears": 203,
       "model": "Novabeast",
       "profile": "../img/pic/Nova.png",
-      "role": "EBS",
+      "role": "Lead EBS",
       "outfits": [
         "../img/outfit/nova/1.png",
         "../img/outfit/nova/2.png"
@@ -157,7 +157,52 @@
       "height_with_ears": 205,
       "model": "Megpie Rexouium",
       "profile": "../img/pic/Meg.png",
-      "role": "Lead MSC",
+      "role": "Lead SMC",
+      "outfits": [
+        "../img/outfit/meg/1.png"
+      ]
+    },
+    "FP011": {
+      "name": "Kero",
+      "sn": "FP011",
+      "reg": "FP01117062026M",
+      "sex": "Male",
+      "deploy": "17/06/2026",
+      "height_no_ears": 190,
+      "height_with_ears": 195,
+      "model": "disko rex broker",
+      "profile": "../img/pic/Kero.png",
+      "role": "SMC",
+      "outfits": [
+        "../img/outfit/meg/1.png"
+      ]
+    },
+        "FP012": {
+      "name": "Kero",
+      "sn": "FP012",
+      "reg": "FP01217062026M",
+      "sex": "Male",
+      "deploy": "17/06/2026",
+      "height_no_ears": 190,
+      "height_with_ears": 195,
+      "model": "disko rex broker",
+      "profile": "../img/pic/Stero.png",
+      "role": "SMC",
+      "outfits": [
+        "../img/outfit/meg/1.png"
+      ]
+    },
+        "FP013": {
+      "name": "Kero",
+      "sn": "FP013",
+      "reg": "FP01317062026M",
+      "sex": "Male",
+      "deploy": "17/06/2026",
+      "height_no_ears": 190,
+      "height_with_ears": 300,
+      "model": "disko rex broker",
+      "profile": "../img/pic/Pero.png",
+      "role": "SMC",
       "outfits": [
         "../img/outfit/meg/1.png"
       ]
