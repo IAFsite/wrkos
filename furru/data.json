@@ -174,7 +174,7 @@
       "profile": "../img/pic/Kero.png",
       "role": "SMC",
       "outfits": [
-        "../img/outfit/meg/1.png"
+        "../img/outfit/kero/1.png"
       ]
     },
     "FP012": {
@@ -189,7 +189,7 @@
       "profile": "../img/pic/Stero.png",
       "role": "SMC",
       "outfits": [
-        "../img/outfit/meg/1.png"
+        "../img/outfit/stero/1.png"
       ]
     },
     "FP013": {
@@ -204,7 +204,7 @@
       "profile": "../img/pic/Pero.png",
       "role": "SMC",
       "outfits": [
-        "../img/outfit/meg/1.png"
+        "../img/outfit/pero/1.png"
       ]
     }
   }
