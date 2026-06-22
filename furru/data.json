@@ -33,19 +33,19 @@
         "../img/outfit/alpha/2.png"
       ]
     },
-    "FP003": {
-      "name": "Cebol",
-      "sn": "FP003",
-      "reg": "FP00307112025U",
+    "█████": {
+      "name": "█████",
+      "sn": "█████",
+      "reg": "█████07112025U",
       "sex": "Undefined",
       "deploy": "07/11/2025",
       "height_no_ears": 122,
       "height_with_ears": 130,
-      "model": "Chibigen",
-      "profile": "../img/pic/Cebol.png",
-      "role": "EBS",
+      "model": "████████",
+      "profile": "../img/asset/image.png",
+      "role": "███",
       "outfits": [
-        "../img/outfit/cebol/1.png"
+        "../img/asset/image.png"
       ]
     },
     "FP004": {

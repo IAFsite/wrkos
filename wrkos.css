@@ -1,0 +1,413 @@
+/* ==========================================
+   WRKOS UNIVERSAL UI
+   IAF Digital Engineering
+========================================== */
+
+:root{
+
+  --bg:#000;
+  --panel:#050505;
+
+  --text:#fff;
+  --text-dim:#bbb;
+  --text-muted:#888;
+
+  --border:
+    rgba(255,255,255,.08);
+
+  --border-hover:
+    rgba(255,255,255,.18);
+
+  --glass:
+    rgba(255,255,255,.04);
+
+  --glass-dark:
+    rgba(0,0,0,.45);
+
+  --radius-sm:10px;
+  --radius-md:14px;
+  --radius-lg:18px;
+
+  --sidebar-width:520px;
+  --mobile-break:900px;
+}
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  height:100%;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* ==========================================
+   TOPBAR
+========================================== */
+
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+
+  padding:20px 30px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  z-index:999;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  height:34px;
+}
+
+.logo span{
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.back-btn{
+  text-decoration:none;
+
+  color:white;
+
+  background:
+    rgba(20,20,20,.6);
+
+  backdrop-filter:blur(10px);
+
+  padding:10px 16px;
+
+  border-radius:999px;
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.hero{
+  width:100%;
+  height:100vh;
+  display:flex;
+}
+
+.sidebar{
+  width:var(--sidebar-width);
+  height:100vh;
+
+  display:flex;
+  flex-direction:column;
+
+  padding:90px 40px 20px;
+
+  background:var(--panel);
+
+  border-right:
+    1px solid rgba(255,255,255,.06);
+}
+
+.workspace{
+  flex:1;
+  position:relative;
+  overflow:hidden;
+}
+
+/* ==========================================
+   HEADERS
+========================================== */
+
+.page-title{
+  font-size:38px;
+  margin-bottom:4px;
+}
+
+.page-subtitle{
+  font-size:13px;
+  color:var(--text-muted);
+  margin-bottom:18px;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+input,
+select,
+textarea{
+
+  width:100%;
+
+  padding:12px 14px;
+
+  border:none;
+  outline:none;
+
+  border-radius:10px;
+
+  background:#14141b;
+
+  color:white;
+}
+
+.search-group{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+/* ==========================================
+   LIST AREA
+========================================== */
+
+.list{
+  flex:1;
+
+  overflow:auto;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:12px;
+
+  padding-right:4px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:14px;
+
+  padding:16px;
+
+  border:
+    1px solid var(--border);
+
+  background:var(--glass);
+
+  transition:.25s;
+
+  cursor:pointer;
+}
+
+.card:hover{
+
+  transform:
+    translateY(-2px);
+
+  border-color:
+    var(--border-hover);
+}
+
+/* background image */
+.card-bg{
+
+  position:absolute;
+  inset:0;
+
+  background-size:cover;
+  background-position:center;
+
+  filter:blur(2px);
+
+  transform:scale(1.1);
+
+  z-index:-2;
+}
+
+/* overlay */
+.card-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.9),
+      rgba(0,0,0,.35)
+    );
+
+  z-index:-1;
+}
+
+/* ==========================================
+   GLASS PANEL
+========================================== */
+
+.glass{
+
+  background:
+    rgba(0,0,0,.45);
+
+  backdrop-filter:
+    blur(10px);
+
+  border:
+    1px solid var(--border);
+
+  border-radius:
+    var(--radius-sm);
+}
+
+/* ==========================================
+   INFO GRID
+========================================== */
+
+.info-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:10px;
+}
+
+.info-box{
+
+  background:
+    rgba(0,0,0,.45);
+
+  backdrop-filter:
+    blur(10px);
+
+  border:
+    1px solid var(--border);
+
+  border-radius:10px;
+
+  padding:10px;
+
+  font-size:12px;
+}
+
+/* ==========================================
+   PROFILE PANEL
+========================================== */
+
+.profile{
+
+  position:absolute;
+
+  left:60px;
+  bottom:60px;
+
+  max-width:700px;
+
+  z-index:2;
+}
+
+.profile h1{
+  font-size:62px;
+}
+
+.profile p{
+  color:var(--text-dim);
+  line-height:1.6;
+}
+
+/* ==========================================
+   WALLPAPER
+========================================== */
+
+.wallpaper{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  object-position:center;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+
+  margin-top:10px;
+
+  color:#666;
+
+  font-size:11px;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#333;
+  border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#555;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:900px){
+
+  body{
+    overflow:auto;
+  }
+
+  .hero{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .sidebar{
+
+    width:100%;
+    height:auto;
+    min-height:100vh;
+  }
+
+  .workspace{
+    display:none;
+  }
+
+}
