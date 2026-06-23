@@ -33,25 +33,10 @@
         "../img/outfit/alpha/2.png"
       ]
     },
-    "█████": {
-      "name": "█████",
-      "sn": "█████",
-      "reg": "█████07112025U",
-      "sex": "Undefined",
-      "deploy": "07/11/2025",
-      "height_no_ears": 122,
-      "height_with_ears": 130,
-      "model": "████████",
-      "profile": "../img/asset/image.png",
-      "role": "███",
-      "outfits": [
-        "../img/asset/image.png"
-      ]
-    },
-    "FP004": {
+    "FP003": {
       "name": "Felo",
-      "sn": "FP004",
-      "reg": "FP00413112025M",
+      "sn": "FP003",
+      "reg": "FP00313112025M",
       "sex": "Male",
       "deploy": "13/11/2025",
       "height_no_ears": 175,
@@ -66,10 +51,10 @@
         "../img/outfit/felo/4.png"
       ]
     },
-    "FP005": {
+    "FP004": {
       "name": "Fela",
-      "sn": "FP005",
-      "reg": "FP00513112025F",
+      "sn": "FP004",
+      "reg": "FP00413112025F",
       "sex": "Female",
       "deploy": "13/11/2025",
       "height_no_ears": 175,
@@ -84,10 +69,10 @@
         "../img/outfit/fela/4.png"
       ]
     },
-    "FP006": {
+    "FP005": {
       "name": "Nova",
-      "sn": "FP006",
-      "reg": "FP00611122025F",
+      "sn": "FP005",
+      "reg": "FP00511122025F",
       "sex": "Female",
       "deploy": "11/12/2025",
       "height_no_ears": 183,
@@ -100,10 +85,10 @@
         "../img/outfit/nova/2.png"
       ]
     },
-    "FP007": {
+    "FP006": {
       "name": "Nop",
-      "sn": "FP007",
-      "reg": "FP00714122025F",
+      "sn": "FP006",
+      "reg": "FP00614122025F",
       "sex": "Female",
       "deploy": "14/12/2025",
       "height_no_ears": 183,
@@ -116,10 +101,10 @@
         "../img/outfit/nop/2.png"
       ]
     },
-    "FP008": {
+    "FP007": {
       "name": "Nami",
-      "sn": "FP008",
-      "reg": "FP00814042026F",
+      "sn": "FP007",
+      "reg": "FP00714042026F",
       "sex": "Female",
       "deploy": "14/04/2026",
       "height_no_ears": 130,
@@ -132,10 +117,10 @@
         "../img/outfit/nami/2.png"
       ]
     },
-    "FP009": {
+    "FP008": {
       "name": "Vix",
-      "sn": "FP009",
-      "reg": "FP00918042026F",
+      "sn": "FP008",
+      "reg": "FP00818042026F",
       "sex": "Female",
       "deploy": "18/04/2026",
       "height_no_ears": 180,
@@ -147,10 +132,10 @@
         "../img/outfit/vix/1.png"
       ]
     },
-    "FP010": {
+    "FP009": {
       "name": "Meg",
-      "sn": "FP010",
-      "reg": "FP01018052026F",
+      "sn": "FP009",
+      "reg": "FP00918052026F",
       "sex": "Female",
       "deploy": "18/05/2026",
       "height_no_ears": 190,
@@ -162,10 +147,10 @@
         "../img/outfit/meg/1.png"
       ]
     },
-    "FP011": {
+    "FP010": {
       "name": "Kero",
-      "sn": "FP011",
-      "reg": "FP01117062026M",
+      "sn": "FP010",
+      "reg": "FP01017062026M",
       "sex": "Male",
       "deploy": "17/06/2026",
       "height_no_ears": 190,
@@ -177,10 +162,10 @@
         "../img/outfit/kero/1.png"
       ]
     },
-    "FP012": {
+    "FP011": {
       "name": "Stero",
-      "sn": "FP012",
-      "reg": "FP01217062026M",
+      "sn": "FP011",
+      "reg": "FP01117062026M",
       "sex": "Male",
       "deploy": "17/06/2026",
       "height_no_ears": 190,
@@ -192,10 +177,10 @@
         "../img/outfit/stero/1.png"
       ]
     },
-    "FP013": {
+    "FP012": {
       "name": "Pero",
-      "sn": "FP013",
-      "reg": "FP01317062026M",
+      "sn": "FP012",
+      "reg": "FP01217062026M",
       "sex": "Male",
       "deploy": "17/06/2026",
       "height_no_ears": 190,
