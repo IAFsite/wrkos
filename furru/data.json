@@ -14,7 +14,7 @@
       "outfits": [
         "../img/outfit/deu/1.png",
         "../img/outfit/deu/2.png",
-        "../img/outfit/deu/4.png"
+        "../img/outfit/deu/3.png"
       ]
     },
     "FP002": {
@@ -129,7 +129,10 @@
       "profile": "../img/pic/Vix.png",
       "role": "ICT",
       "outfits": [
-        "../img/outfit/vix/1.png"
+        "../img/outfit/vix/1.png",
+        "../img/outfit/vix/2.png",
+        "../img/outfit/vix/3.png",
+        "../img/outfit/vix/4.png"
       ]
     },
     "FP009": {
