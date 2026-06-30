@@ -10,12 +10,11 @@
       "height_with_ears": 203,
       "model": "Deuzear",
       "profile": "../img/pic/Deu.png",
-      "subtitle": "FP001 | FP00111082025M | lead ICT",
       "role": "ICT",
       "outfits": [
         "../img/outfit/deu/1.png",
         "../img/outfit/deu/2.png",
-        "../img/outfit/deu/4.png"
+        "../img/outfit/deu/3.png"
       ]
     },
     "FP002": {
@@ -28,7 +27,6 @@
       "height_with_ears": 220,
       "model": "Alphazear",
       "profile": "../img/pic/Alpha.png",
-      "subtitle": "FP002 | FP00227102025M | EBS security enforcement",
       "role": "EBS",
       "outfits": [
         "../img/outfit/alpha/1.png",
@@ -36,32 +34,15 @@
       ]
     },
     "FP003": {
-      "name": "Cebol",
-      "sn": "FP003",
-      "reg": "FP00307112025U",
-      "sex": "Undefined",
-      "deploy": "07/11/2025",
-      "height_no_ears": 122,
-      "height_with_ears": 130,
-      "model": "Chibigen",
-      "profile": "../img/pic/Cebol.png",
-      "subtitle": "FP003 | FP00307112025U | none",
-      "role": "none",
-      "outfits": [
-        "../img/outfit/cebol/1.png"
-      ]
-    },
-    "FP004": {
       "name": "Felo",
-      "sn": "FP004",
-      "reg": "FP00413112025M",
+      "sn": "FP003",
+      "reg": "FP00313112025M",
       "sex": "Male",
       "deploy": "13/11/2025",
       "height_no_ears": 175,
       "height_with_ears": 183,
       "model": "Winterpal Feline",
       "profile": "../img/pic/Felo.png",
-      "subtitle": "FP004 | FP00413112025M | ICT",
       "role": "ICT",
       "outfits": [
         "../img/outfit/felo/1.png",
@@ -70,17 +51,16 @@
         "../img/outfit/felo/4.png"
       ]
     },
-    "FP005": {
+    "FP004": {
       "name": "Fela",
-      "sn": "FP005",
-      "reg": "FP00513112025F",
+      "sn": "FP004",
+      "reg": "FP00413112025F",
       "sex": "Female",
       "deploy": "13/11/2025",
       "height_no_ears": 175,
       "height_with_ears": 183,
       "model": "Winterpal Feline",
       "profile": "../img/pic/Fela.png",
-      "subtitle": "FP005 | FP00513112025F | ICT",
       "role": "ICT",
       "outfits": [
         "../img/outfit/fela/1.png",
@@ -89,87 +69,132 @@
         "../img/outfit/fela/4.png"
       ]
     },
-    "FP006": {
+    "FP005": {
       "name": "Nova",
-      "sn": "FP006",
-      "reg": "FP00611122025F",
+      "sn": "FP005",
+      "reg": "FP00511122025F",
       "sex": "Female",
       "deploy": "11/12/2025",
       "height_no_ears": 183,
       "height_with_ears": 203,
       "model": "Novabeast",
       "profile": "../img/pic/Nova.png",
-      "subtitle": "FP006 | FP00611122025F | lead EBS",
-      "role": "EBS",
+      "role": "Lead EBS",
       "outfits": [
         "../img/outfit/nova/1.png",
         "../img/outfit/nova/2.png"
       ]
     },
-    "FP007": {
+    "FP006": {
       "name": "Nop",
-      "sn": "FP007",
-      "reg": "FP00714122025F",
+      "sn": "FP006",
+      "reg": "FP00614122025F",
       "sex": "Female",
       "deploy": "14/12/2025",
       "height_no_ears": 183,
       "height_with_ears": 193,
       "model": "Nova Pup",
       "profile": "../img/pic/Nop.png",
-      "subtitle": "FP007 | FP00714122025F | EBS",
       "role": "EBS",
       "outfits": [
         "../img/outfit/nop/1.png",
         "../img/outfit/nop/2.png"
       ]
     },
-    "FP008": {
+    "FP007": {
       "name": "Nami",
-      "sn": "FP008",
-      "reg": "FP00814042026F",
+      "sn": "FP007",
+      "reg": "FP00714042026F",
       "sex": "Female",
       "deploy": "14/04/2026",
       "height_no_ears": 130,
       "height_with_ears": 130,
       "model": "Nanami",
       "profile": "../img/pic/Nami.png",
-      "subtitle": "FP008 | FP00814042025F | EBS",
       "role": "EBS",
       "outfits": [
         "../img/outfit/nami/1.png",
         "../img/outfit/nami/2.png"
       ]
     },
-    "FP009": {
+    "FP008": {
       "name": "Vix",
-      "sn": "FP009",
-      "reg": "FP00918042026F",
+      "sn": "FP008",
+      "reg": "FP00818042026F",
       "sex": "Female",
       "deploy": "18/04/2026",
       "height_no_ears": 180,
       "height_with_ears": 185,
       "model": "Vixine",
       "profile": "../img/pic/Vix.png",
-      "subtitle": "FP009 | FP00918042025F | ICT",
-      "role": "EBS",
+      "role": "ICT",
       "outfits": [
-        "../img/outfit/vix/1.png"
+        "../img/outfit/vix/1.png",
+        "../img/outfit/vix/2.png",
+        "../img/outfit/vix/3.png",
+        "../img/outfit/vix/4.png",
+        "../img/outfit/vix/5.png",
+        "../img/outfit/vix/6.png"
       ]
     },
-    "FP010": {
+    "FP009": {
       "name": "Meg",
-      "sn": "FP0010",
-      "reg": "FP01018052026F",
+      "sn": "FP009",
+      "reg": "FP00918052026F",
       "sex": "Female",
       "deploy": "18/05/2026",
       "height_no_ears": 190,
       "height_with_ears": 205,
       "model": "Megpie Rexouium",
       "profile": "../img/pic/Meg.png",
-      "subtitle": "FP010 | FP01018052026F | Lead SMC",
-      "role": "Lead MSC",
+      "role": "Lead SMC",
       "outfits": [
-        "../img/outfit/Meg/1.png"
+        "../img/outfit/meg/1.png"
+      ]
+    },
+    "FP010": {
+      "name": "Kero",
+      "sn": "FP010",
+      "reg": "FP01017062026M",
+      "sex": "Male",
+      "deploy": "17/06/2026",
+      "height_no_ears": 190,
+      "height_with_ears": 195,
+      "model": "disko rex broker",
+      "profile": "../img/pic/Kero.png",
+      "role": "SMC",
+      "outfits": [
+        "../img/outfit/kero/1.png"
+      ]
+    },
+    "FP011": {
+      "name": "Stero",
+      "sn": "FP011",
+      "reg": "FP01117062026M",
+      "sex": "Male",
+      "deploy": "17/06/2026",
+      "height_no_ears": 190,
+      "height_with_ears": 195,
+      "model": "disko rex Meowster",
+      "profile": "../img/pic/Stero.png",
+      "role": "SMC",
+      "outfits": [
+        "../img/outfit/stero/1.png"
+      ]
+    },
+    "FP012": {
+      "name": "Pero",
+      "sn": "FP012",
+      "reg": "FP01217062026M",
+      "sex": "Male",
+      "deploy": "17/06/2026",
+      "height_no_ears": 190,
+      "height_with_ears": 300,
+      "model": "disko rex yapper",
+      "profile": "../img/pic/Pero.png",
+      "role": "SMC",
+      "outfits": [
+        "../img/outfit/pero/1.png"
       ]
     }
   }

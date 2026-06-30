@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAF Voice Test</title>
+</head>
+<body>
+
+<button onclick="playAll()">🔊 Read All Personnel</button>
+
+<script>
+
+let personnel = {};
+
+fetch("data.json")
+.then(r => r.json())
+.then(data => {
+    personnel = data.personnel;
+});
+
+async function playAll(){
+
+    if(Object.keys(personnel).length === 0){
+        alert("Data belum dimuat.");
+        return;
+    }
+
+    for(const id in personnel){
+
+        // Baca SN
+        await playCode(personnel[id].sn);
+
+        // Jeda
+        await wait(500);
+
+        // Baca REG
+        await playCode(personnel[id].reg);
+
+        // Jeda sebelum personel berikutnya
+        await wait(1000);
+
+    }
+
+}
+
+async function playCode(text){
+
+    const playlist = [];
+
+    let i = 0;
+
+    while(i < text.length){
+
+        // FP
+        if(text.substring(i, i + 2) === "FP"){
+            playlist.push("../audio/FP.mp3");
+            i += 2;
+            continue;
+        }
+
+        const c = text[i];
+
+        if(c >= "0" && c <= "9"){
+            playlist.push(`../audio/${c}.mp3`);
+        }
+        else if(c === "M"){
+            playlist.push("../audio/M.mp3");
+        }
+        else if(c === "F"){
+            playlist.push("../audio/F.mp3");
+        }
+
+        i++;
+
+    }
+
+    await playPlaylist(playlist);
+
+}
+
+function playPlaylist(list){
+
+    return new Promise(resolve => {
+
+        let index = 0;
+
+        function next(){
+
+            if(index >= list.length){
+                resolve();
+                return;
+            }
+
+            const audio = new Audio(list[index]);
+
+            audio.onended = () => {
+                index++;
+                next();
+            };
+
+            audio.onerror = () => {
+                console.log("Gagal memuat:", list[index]);
+                index++;
+                next();
+            };
+
+            audio.play();
+
+        }
+
+        next();
+
+    });
+
+}
+
+function wait(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+</script>
+
+</body>
+</html>
