@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>IAF ATS</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f4f4;
+    color:#111;
+}
+
+.topbar{
+
+    position:sticky;
+    top:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 22px;
+
+    background:#fff;
+    border-bottom:1px solid #ddd;
+
+    z-index:10;
+}
+
+.back{
+
+    text-decoration:none;
+    color:#111;
+    font-size:14px;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.logo img{
+
+    height:30px;
+
+}
+
+.logo span{
+
+    font-weight:bold;
+    letter-spacing:2px;
+
+}
+
+.hero{
+
+    padding:40px 20px;
+    text-align:center;
+
+}
+
+.hero img{
+
+    width:100%;
+    max-width:550px;
+    height:420px;
+
+    object-fit:contain;
+
+}
+
+.content{
+
+    max-width:900px;
+    margin:auto;
+    padding:0 20px 50px;
+
+}
+
+.type{
+
+    color:#777;
+    font-size:14px;
+    margin-bottom:8px;
+
+}
+
+h1{
+
+    font-size:46px;
+
+}
+
+.reg{
+
+    color:#777;
+    margin-top:8px;
+    margin-bottom:20px;
+
+}
+
+.desc{
+
+    line-height:1.7;
+    color:#555;
+    margin-bottom:35px;
+
+}
+
+.grid{
+
+    display:grid;
+    gap:15px;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+}
+
+.card{
+
+    background:white;
+
+    border:1px solid #e4e4e4;
+
+    border-radius:14px;
+
+    padding:18px;
+
+}
+
+.card small{
+
+    display:block;
+    color:#777;
+    margin-bottom:8px;
+
+}
+
+.card b{
+
+    font-size:18px;
+
+}
+
+.gallery{
+
+    margin-top:40px;
+
+}
+
+.gallery h2{
+
+    margin-bottom:20px;
+
+}
+
+.images{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(180px,1fr));
+
+    gap:15px;
+
+}
+
+.images img{
+
+    width:100%;
+    border-radius:12px;
+    cursor:pointer;
+
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+    transition:.2s;
+
+}
+
+.images img:hover{
+
+    transform:scale(1.02);
+
+}
+
+.viewer{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.viewer img{
+
+    max-width:90%;
+    max-height:90%;
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+
+<a class="back" href="index.html">
+
+</a>
+
+<div class="logo">
+
+<img src="../iaf-logo.png">
+
+<span>ATS</span>
+
+</div>
+
+</div>
+
+
+<div class="hero">
+
+<img id="profile">
+
+</div>
+
+
+<div class="content">
+
+<div class="type">
+IAF Asset Tracking System
+</div>
+
+<h1 id="name">
+Loading...
+</h1>
+
+<div class="reg" id="reg"></div>
+
+<div class="desc" id="desc"></div>
+
+<div class="grid" id="info"></div>
+
+<div class="gallery">
+
+<h2>Gallery</h2>
+
+<div class="images" id="gallery"></div>
+
+</div>
+
+</div>
+
+
+<div
+class="viewer"
+id="viewer"
+onclick="this.style.display='none'"
+>
+
+<img id="viewerImg">
+
+</div>
+
+
+<script>
+
+async function load(){
+
+    const id =
+        new URLSearchParams(location.search)
+        .get("id");
+
+    const data =
+        await fetch("data.json")
+        .then(r=>r.json());
+
+    // Cari berdasarkan key ATAU REG-ID
+    let fp = data.personnel[id];
+
+    if(!fp){
+
+        fp = Object.values(data.personnel)
+            .find(p=>p.reg===id);
+
+    }
+
+    if(!fp){
+
+        document.getElementById("name").textContent =
+            "Asset Not Found";
+
+        document.getElementById("desc").textContent =
+            "The requested asset could not be found.";
+
+        return;
+
+    }
+
+    // Hero Image
+    profile.src = fp.profile;
+
+    // Header
+    name.textContent = fp.name;
+    reg.textContent = fp.reg;
+
+    // Description
+    desc.textContent =
+        fp.description
+
+    // Info Card
+    const fields = [
+
+        ["Serial Number", fp.sn],
+        ["Model", fp.model],
+        ["Role", fp.role],
+        ["Deploy", fp.deploy],
+        ["Sex", fp.sex],
+
+        [
+            "Height",
+            fp.height_no_ears
+                ? fp.height_no_ears + " cm"
+                : null
+        ],
+
+        [
+            "Height (Ear)",
+            fp.height_with_ears
+                ? fp.height_with_ears + " cm"
+                : null
+        ]
+
+    ];
+
+    info.innerHTML = "";
+
+    fields.forEach(f=>{
+
+        if(!f[1]) return;
+
+        info.innerHTML += `
+
+        <div class="card">
+
+            <small>${f[0]}</small>
+
+            <b>${f[1]}</b>
+
+        </div>
+
+        `;
+
+    });
+
+    // Gallery
+    gallery.innerHTML = "";
+
+    [
+        fp.profile,
+        ...(fp.outfits || [])
+
+    ].forEach(img=>{
+
+        gallery.innerHTML += `
+
+        <img
+            src="${img}"
+            onclick="
+                viewer.style.display='flex';
+                viewerImg.src='${img}'
+            "
+        >
+
+        `;
+
+    });
+
+}
+
+load();
+
+</script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
     "FP001": {
       "name": "Deu",
       "sn": "FP001",
-      "reg": "FP00111082025M",
+      "reg": "FP00111082025",
       "sex": "Male",
       "deploy": "11/08/2025",
       "height_no_ears": 193,
@@ -15,12 +15,14 @@
         "../img/outfit/deu/1.png",
         "../img/outfit/deu/2.png",
         "../img/outfit/deu/3.png"
-      ]
+      ],
+      "description": "First generation Furru unit assigned to the ICT division."
+
     },
     "FP002": {
       "name": "Alpha",
       "sn": "FP002",
-      "reg": "FP00227102025M",
+      "reg": "FP00227102025",
       "sex": "Male",
       "deploy": "27/10/2025",
       "height_no_ears": 203,
@@ -36,7 +38,7 @@
     "FP003": {
       "name": "Felo",
       "sn": "FP003",
-      "reg": "FP00313112025M",
+      "reg": "FP00313112025",
       "sex": "Male",
       "deploy": "13/11/2025",
       "height_no_ears": 175,
@@ -54,7 +56,7 @@
     "FP004": {
       "name": "Fela",
       "sn": "FP004",
-      "reg": "FP00413112025F",
+      "reg": "FP00413112025",
       "sex": "Female",
       "deploy": "13/11/2025",
       "height_no_ears": 175,
@@ -72,7 +74,7 @@
     "FP005": {
       "name": "Nova",
       "sn": "FP005",
-      "reg": "FP00511122025F",
+      "reg": "FP00511122025",
       "sex": "Female",
       "deploy": "11/12/2025",
       "height_no_ears": 183,
@@ -88,7 +90,7 @@
     "FP006": {
       "name": "Nop",
       "sn": "FP006",
-      "reg": "FP00614122025F",
+      "reg": "FP00614122025",
       "sex": "Female",
       "deploy": "14/12/2025",
       "height_no_ears": 183,
@@ -104,7 +106,7 @@
     "FP007": {
       "name": "Nami",
       "sn": "FP007",
-      "reg": "FP00714042026F",
+      "reg": "FP00714042026",
       "sex": "Female",
       "deploy": "14/04/2026",
       "height_no_ears": 130,
@@ -120,7 +122,7 @@
     "FP008": {
       "name": "Vix",
       "sn": "FP008",
-      "reg": "FP00818042026F",
+      "reg": "FP00818042026",
       "sex": "Female",
       "deploy": "18/04/2026",
       "height_no_ears": 180,
@@ -140,7 +142,7 @@
     "FP009": {
       "name": "Meg",
       "sn": "FP009",
-      "reg": "FP00918052026F",
+      "reg": "FP00918052026",
       "sex": "Female",
       "deploy": "18/05/2026",
       "height_no_ears": 190,
@@ -155,7 +157,7 @@
     "FP010": {
       "name": "Kero",
       "sn": "FP010",
-      "reg": "FP01017062026M",
+      "reg": "FP01017062026",
       "sex": "Male",
       "deploy": "17/06/2026",
       "height_no_ears": 190,
@@ -170,7 +172,7 @@
     "FP011": {
       "name": "Stero",
       "sn": "FP011",
-      "reg": "FP01117062026M",
+      "reg": "FP01117062026",
       "sex": "Male",
       "deploy": "17/06/2026",
       "height_no_ears": 190,
@@ -185,7 +187,7 @@
     "FP012": {
       "name": "Pero",
       "sn": "FP012",
-      "reg": "FP01217062026M",
+      "reg": "FP01217062026",
       "sex": "Male",
       "deploy": "17/06/2026",
       "height_no_ears": 190,
